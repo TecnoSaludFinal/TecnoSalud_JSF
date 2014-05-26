@@ -1,0 +1,55 @@
+body
+{
+  background-color:grey;
+  width:950;
+  
+  margin: 0 auto;
+  padding:0;
+  margin-bottom: 5px;
+  overflow: auto; 
+}
+                          
+#pagina_principal
+{
+  margin: 0 auto;
+  padding:0;
+  margin-bottom: 5px;
+  overflow: auto; 
+  width:950;
+  border: 2;
+}
+
+#logo
+{
+  text-align:center;
+  background-color:yellow;
+  height:200;
+} 
+
+
+#menu
+{
+    width:250;
+    height:400;
+    overflow:hidden;
+    margin: 0 auto;
+    float:left;
+    background-color:pink;
+  
+
+}
+
+#centro
+{
+    width:700;
+    height:400;
+    float:left;
+    background-color:orange;
+    overflow:hidden;
+    
+}
+
+#logout
+{
+  float: right;
+}
