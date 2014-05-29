@@ -28,7 +28,7 @@
         %>
         <h1>Bienvenido: <%= p.getNombre() +" "+ p.getApellidos() +" -- "+ p.getIdRol().getTipoRol() %></h1>
         
-        <a href="datosPersonales.jsp">Datos personales</a>
+        <a href="faces/deiver_jsf/pacientePersonal.xhtml">Datos personales</a>
         <a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Citas</a>
         
         <a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Consultar Historial médico</a>
