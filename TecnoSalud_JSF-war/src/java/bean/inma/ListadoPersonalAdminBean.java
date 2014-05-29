@@ -6,9 +6,8 @@
 
 package bean.inma;
 
-import app.dao.MedicosFacade;
-import app.dao.MedicosFacadeLocal;
-import app.entity.Medicos;
+import app.dao.PersonalAdministrativoFacadeLocal;
+import app.entity.PersonalAdministrativo;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -21,35 +20,31 @@ import javax.faces.bean.ManagedBean;
  *
  * @author Inma
  */
-@ManagedBean(name="listadoMedicosBean")
+@ManagedBean(name="listadoPersonalAdminBean")
 @RequestScoped
-public class ListadoMedicosBean 
+public class ListadoPersonalAdminBean 
 {
     @EJB
-    private MedicosFacadeLocal medicosFacadelocal;
+    private PersonalAdministrativoFacadeLocal pAdminFacadelocal;
     
-    private List <Medicos> listaMedicos; 
+    private List <PersonalAdministrativo> listaPAdmin; 
     
     // Add business logic below. (Right-click in editor and choose
     // "Insert Cod e > Add Business Method")
-    
-   
-
-    public List<Medicos> getListaMedicos() {
-        return listaMedicos;
+    public List<PersonalAdministrativo> getListaPAdmin() {
+        return listaPAdmin;
     }
-    public void setListaMedicos(List<Medicos> listaMedicos) 
-    {
-        this.listaMedicos = listaMedicos;
-    }   
-    
+
+    public void setListaPAdmin(List<PersonalAdministrativo> listaPAdmin) {
+        this.listaPAdmin = listaPAdmin;
+    }    
+      
     @PostConstruct
     public void create()
     {
-        //Lo utilizamos para hacer la lectura del supermercado
-        listaMedicos = this.medicosFacadelocal.findAll();
+        listaPAdmin = this.pAdminFacadelocal.findAll();
     }    
-    public ListadoMedicosBean()
+    public ListadoPersonalAdminBean()
     {
         
     }

@@ -35,9 +35,9 @@
 			<h3>Funcionalidades</h3>
 			<ul>
 				<li><a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Crear nuevo medico</a></li>
-				<li><a href="BorrarMedico.jsp">Eliminar medico</a></li>
-                                <li><a href="ConsultarMedico.jsp">Consultar medico</a></li>
-                                <li><a href="ModificarMedico.jsp">Modificar datos de un medico</a></li>					
+				<li><a href="inma/BorrarMedico.jsp">Eliminar medico</a></li>
+                                <li><a href="inma/ConsultarMedico.jsp">Consultar medico</a></li>
+                                <li><a href="inma/ModificarMedico.jsp">Modificar datos de un medico</a></li>					
 			</ul>
 				
             </div> <!-- end side-menu -->

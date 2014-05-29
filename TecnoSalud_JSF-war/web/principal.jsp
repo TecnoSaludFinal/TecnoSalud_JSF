@@ -54,15 +54,15 @@
          <h1>Bienvenido: <%= m.getNombre() +" "+ m.getApellidos() +" -- "+ m.getIdRol().getTipoRol() %></h1>
          
         
-<<<<<<< HEAD
+
         <a href =" faces/jose/ConsultarPerfil.xhtml">Consultar perfil personal</a></td><br>
         <a href =" faces/jose/CrearSolicitud.xhtml">Crear solicitud cambios de datos</a></td><br>
         <a href="datosPersonales.jsp">Datos personales</a></td><br>
         <a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Consultar Historial médico</a></td><br>
-=======
+
         <a href="datosPersonales.jsp">Datos personales</a>
         <a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Consultar Historial médico</a>
->>>>>>> 3cd4a54e24dc281104ba83e074f07efd34c80be9
+
         <h4>Consulta de Citas</h4><br>
             <a href="ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br>
             <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br>
@@ -101,14 +101,21 @@
          <h1>Bienvenido: <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %></h1>
         
         <a href="inma/PanelAdminMedicos.jsp">Panel de control de Medicos</a>
+        <br>
         <a href="inma/PanelAdminPersonalAdmin.jsp">Panel de control de Personal Administrativo</a>
+        <br>         
+        <a href="faces/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a>
+        <br>         
+        <a href="faces/inma/ListadoPA.xhtml">Listado del Personal Administrativo del hospital</a>
+        <br>
+        
         
          <h4>Consulta de Citas</h4><br>
-<<<<<<< HEAD
+
             <a href="http://localhost:8080/TecnoSalud_JSFl-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
-=======
+
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
->>>>>>> 3cd4a54e24dc281104ba83e074f07efd34c80be9
+
             <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Consultar las citas próximas</a> </td> <br><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Consultar las citas pasadas</a> </td> <br><br>
