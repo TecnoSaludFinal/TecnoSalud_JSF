@@ -9,9 +9,7 @@
     <h:body>
         <h1>
             Listado de mensajes del Hospital
-        </h1>      
-       
-
+        </h1>   
         <h:form>
             <h:dataTable value="#{listadoMensajesBean.listaMen}" var="lista">
             <h:column>
@@ -43,7 +41,13 @@
                    Estado
                 </f:facet>
                 #{lista.estado}
-            </h:column>    
+            </h:column>  
+             <h:column>
+                 <f:facet name="header">
+                   Tipo de mensaje
+                </f:facet>
+                #{lista.tipoMensaje}
+            </h:column>      
             <h:column>
                 <h:commandButton value="Modificar ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
                 </h:commandButton>              
