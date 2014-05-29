@@ -18,7 +18,7 @@
 	
     </head>
     <body>
-        <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+        <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
         
 						<h3 class="fl">Nuevo formulario</h3>
 											
@@ -39,7 +39,7 @@
                  %>
 
             
-            <form name="new" action="http://localhost:8080/TecnoSalud_Final-war/nuevoFormulario" method="post">
+            <form name="new" action="http://localhost:8080/TecnoSalud_JSF-war/nuevoFormulario" method="post">
            
            <fieldset>   
             <label> Nos encantaría conocer tu sugerencia para mejorar nuestro servicio. </label> 

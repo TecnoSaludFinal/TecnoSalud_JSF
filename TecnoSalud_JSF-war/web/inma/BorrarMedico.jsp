@@ -34,7 +34,7 @@
         </div>      
         	    
                 
-         <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/BorrarMedico" method="post">
+         <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorrarMedico" method="post">
               <%-- Datos del medico a buscar --%>
                 <fieldset>   
                     <label> Introduzca el identificador del médico que desee borrar:</label> 

@@ -34,7 +34,7 @@
                 <br>
 			<h3>Funcionalidades</h3>
 			<ul>
-				<li><a href="http://localhost:8080/TecnoSalud_Final-war/NuevoPersonalAdmin">Crear nuevo personal administrativo</a></li>
+				<li><a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Crear nuevo personal administrativo</a></li>
 				<li><a href="BorrarPersonalAdmin.jsp">Eliminar personal administrativo</a></li>
                                 <li><a href="ConsultarPersonalAdmin.jsp">Consultar personal administrativo</a></li>
                                 <li><a href="ModificarPersonalAdmin.jsp">Modificar datos del personal administrativo</a></li>

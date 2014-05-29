@@ -19,17 +19,17 @@
         %>
         <div id = logo>
             <h1> PERSONAL ADMINISTRATIVO</h1>
-              <a href="/TecnoSalud_Final-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
+              <a href="/TecnoSalud_JSF-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
               <b id = logout><%= personal.getApellidos() + " " + personal.getNombre()+ " " %></b>
               <br>
         </div>
         <div id = pagina_principal>
             <div id = menu>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/ListadoPacientes"> Listar pacientes</a>
+                <a href ="/TecnoSalud_JSF-war/ListadoPacientes"> Listar pacientes</a>
             </div>
             <div id = centro>
   

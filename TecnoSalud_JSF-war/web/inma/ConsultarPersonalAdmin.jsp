@@ -27,7 +27,7 @@
         </div>       
         
                
-         <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ConsultarPersonalAdmin" method="post">
+         <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarPersonalAdmin" method="post">
               <%-- Datos del medico a buscar --%>
                 <fieldset>   
                     <label> Introduzca el identificador del personal administrativo que desee consultar:</label> 

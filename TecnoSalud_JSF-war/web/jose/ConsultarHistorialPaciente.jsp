@@ -16,14 +16,14 @@
 	
     </head>
     <body>
-       <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+       <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
 					
 						<h3 class="fl">Historial Médico</h3>
 											
 				  
 
             
-            <form name="consulta" action="http://localhost:8080/TecnoSalud_Final-war/consultarHistorial" method="post" onsubmit="return validarForm(this)">
+            <form name="consulta" action="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial" method="post" onsubmit="return validarForm(this)">
             <%-- Datos del paciente a buscar --%>
            <fieldset>   
                

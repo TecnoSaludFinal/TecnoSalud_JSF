@@ -25,7 +25,7 @@
            <h1>Eliminar Medico
            </h1>
         </div>
-     <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/BorrarMedico" method="post">
+     <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorrarMedico" method="post">
         <fieldset> 
             
              <%

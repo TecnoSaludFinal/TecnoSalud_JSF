@@ -30,7 +30,7 @@
         
         <%-- Con esto, nos devuelve el objeto MEDICO --%>
                 
-         <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ConsultarMedico" method="post">
+         <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarMedico" method="post">
               <%-- Datos del medico a buscar --%>
                 <fieldset>   
                     <label> Introduzca el identificador del médico que desee consultar:</label> 

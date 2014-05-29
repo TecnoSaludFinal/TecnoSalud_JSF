@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Personal Administrativo</title>
-        <link rel="Stylesheet" type="text/css" href="/TecnoSalud_Final-war/arkadiusz/style.css" />
+        <link rel="Stylesheet" type="text/css" href="/TecnoSalud_JSF-war/arkadiusz/style.css" />
     </head>
     <body>
         <%
@@ -20,17 +20,17 @@
         %>
       <div id = logo>
             <h1> PERSONAL ADMINISTRATIVO</h1>
-              <a href="/TecnoSalud_Final-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
+              <a href="/TecnoSalud_JSF-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
               <b id = logout><%= personal.getApellidos() + " " + personal.getNombre()+ " " %></b>
               <br>
         </div>
         <div id = pagina_principal>
             <div id = menu>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/ListadoPacientes"> Listar pacientes</a>
+                <a href ="/TecnoSalud_JSF-war/ListadoPacientes"> Listar pacientes</a>
             </div>
             <div id = centro>
             <br>
@@ -40,7 +40,7 @@
                 out.println(error);
             }
             %>
-            <form action="/TecnoSalud_Final-war/CrearPaciente" method="POST">
+            <form action="/TecnoSalud_JSF-war/CrearPaciente" method="POST">
                 NUHSA:
                 <br>
                 <input type="text" name="nuhsa"><br>

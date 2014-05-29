@@ -39,7 +39,7 @@
         <h1>Bienvenido: <%= pa.getNombre() +" "+ pa.getApellidos() +" -- "+ pa.getIdRol().getTipoRol() %></h1>
         <br/><br/>
         
-        <form method="POST" action="http://localhost:8080/TecnoSalud_Final-war/modificando">
+        <form method="POST" action="http://localhost:8080/TecnoSalud_JSF-war/modificando">
         
             <input type="hidden" value="<%= c.getIdCitas() %>" name="idCita">
             <input type="hidden" value="<%= c.getNushaPaciente().getDni() %>" name="idPaciente">

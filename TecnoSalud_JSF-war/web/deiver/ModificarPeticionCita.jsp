@@ -57,7 +57,7 @@
         %>
         <br/><br/>
         
-        <form method="POST" action="http://localhost:8080/TecnoSalud_Final-war/modificandoPeticionCita">
+        <form method="POST" action="http://localhost:8080/TecnoSalud_JSF-war/modificandoPeticionCita">
         
             <input type="hidden" value="<%= pc.getIdPeticion() %>" name="idPeticionCita">
             <input type="hidden" value="<%= pc.getNuhsaPaciente().getDni() %>" name="paciente">

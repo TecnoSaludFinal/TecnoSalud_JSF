@@ -40,7 +40,7 @@
         %>
 											
 	 
-        <form method="post" action="http://localhost:8080/TecnoSalud_Final-war/NuevoPersonalAdminM" name="datos" onsubmit="return validarForm(this)">
+        <form method="post" action="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdminM" name="datos" onsubmit="return validarForm(this)">
             <fieldset>
                 
                 <%-- Datos del nuevo a crear --%>    

@@ -17,6 +17,6 @@
         
         <div>Se ha realizado la modificación</div>
         
-        <a href="http://localhost:8080/TecnoSalud_Final-war/listado">Volver</a>
+        <a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Volver</a>
     </body>
 </html>

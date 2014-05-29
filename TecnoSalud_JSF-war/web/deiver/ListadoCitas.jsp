@@ -121,7 +121,7 @@
         %>
         
         
-        <a href="http://localhost:8080/TecnoSalud_Final-war/listaEsp">Opciones cita</a>
+        <a href="http://localhost:8080/TecnoSalud_JSF-war/listaEsp">Opciones cita</a>
         <a href="ConsultarListadoCitas?do=all">Mostrar citas de hoy</a>
     </body>
 </html>
