@@ -14,6 +14,6 @@
     <body>
         <h2>Se ha completado la sugerencia/queja. Muchas gracias por su atención.</h2>
         
-          <a href="http://localhost:8080/TecnoSalud_Final-war/principal.jsp">Volver</a>
+          <a href="http://localhost:8080/TecnoSalud_JSF-war/principal.jsp">Volver</a>
     </body>
 </html>

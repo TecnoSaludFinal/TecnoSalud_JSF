@@ -16,14 +16,14 @@
 	
     </head>
     <body>
-           <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+           <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
 					
 						<h3 class="fl">Busqueda por paciente</h3>
 											
 					</div> <!-- end content-module-heading -->    
 
             
-            <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ConsultarFormulario?do=espe" method="post">
+            <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=espe" method="post">
             <%-- Datos del paciente a buscar --%>
            <fieldset>   
             <label> Introduzca los datos necesarios para la busqueda de paciente:</label> 

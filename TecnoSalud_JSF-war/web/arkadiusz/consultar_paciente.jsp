@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Personal Administrativo</title>
-        <link rel="Stylesheet" type="text/css" href="/TecnoSalud_Final-war/arkadiusz/style.css" />
+        <link rel="Stylesheet" type="text/css" href="/TecnoSalud_JSF-war/arkadiusz/style.css" />
     </head>
     <body>
         <%
@@ -26,17 +26,17 @@
         %>
         <div id = logo>
             <h1> PERSONAL ADMINISTRATIVO</h1>
-              <a href="/TecnoSalud_Final-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
+              <a href="/TecnoSalud_JSF-war/PersonalAdministrativoLogout" id=logout> Salida </a> 
               <b id = logout><%= personal.getApellidos() + " " + personal.getNombre()+ " " %></b>
               <br>
         </div>
         <div id = pagina_principal>
             <div id = menu>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente </a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
+                <a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp"> Consultar Paciente</a>
                 <br>
-                <a href ="/TecnoSalud_Final-war/ListadoPacientes"> Listar pacientes</a>
+                <a href ="/TecnoSalud_JSF-war/ListadoPacientes"> Listar pacientes</a>
             </div>
             <div id = centro>
   
@@ -52,15 +52,15 @@
                 <th>Modificar</th>
                 <th>Eliminar</th>
                 <tr>
-                  <td><a href="/TecnoSalud_Final-war/arkadiusz/consultar_paciente.jsp"> <%= paciente.getNuhsa() %></a></td>
+                  <td><a href="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente.jsp"> <%= paciente.getNuhsa() %></a></td>
                   <td><%= paciente.getNombre() %></td>
                   <td><%= paciente.getApellidos() %></td>
                   <td><%= paciente.getContrasena() %></td>
                   <td><%= paciente.getDni() %></td>
                   <td><%= paciente.getDireccion() %></td>
                   <td><%= fecha %></td>
-                  <td><a href="/TecnoSalud_Final-war/ModificarPaciente2?nuhsa=<%= paciente.getNuhsa() %>">Modify</a></td>
-                  <td><a href="/TecnoSalud_Final-war/BorrarPaciente?nuhsa=<%= paciente.getNuhsa() %>">Delete</a></td>
+                  <td><a href="/TecnoSalud_JSF-war/ModificarPaciente2?nuhsa=<%= paciente.getNuhsa() %>">Modify</a></td>
+                  <td><a href="/TecnoSalud_JSF-war/BorrarPaciente?nuhsa=<%= paciente.getNuhsa() %>">Delete</a></td>
                   
                 </tr>
               

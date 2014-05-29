@@ -30,7 +30,7 @@
         </div>      
        
                 
-        <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ModificarPersonalAdmin" method="post">
+        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarPersonalAdmin" method="post">
               <%-- Datos del personal a buscar --%>
                 <fieldset>   
                     <label> Introduzca el identificador del personal:</label> 

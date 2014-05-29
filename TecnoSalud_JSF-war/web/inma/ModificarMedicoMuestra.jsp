@@ -40,7 +40,7 @@
             List<Roles> lista_rol = (List <Roles>)request.getAttribute("lista_rol");
         %>
      
-          <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ModificarMedicoM" method="post">
+          <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarMedicoM" method="post">
                 <fieldset> 
                         <legend align= "left">
                                 Datos del medico a consultar

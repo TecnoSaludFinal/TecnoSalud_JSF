@@ -16,7 +16,7 @@
 	
     </head>
     <body>
-             <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+             <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
 					
 						<h3 class="fl">Busqueda por paciente</h3>
 											
@@ -33,7 +33,7 @@
                 if(listaCitas==null)
                 {
                 %>
-            <form name="consulta" action="http://localhost:8080/TecnoSalud_Final-war/ConsultarListadoCitas?do=paci" method="post" onsubmit="return validarForm(this)">
+            <form name="consulta" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci" method="post" onsubmit="return validarForm(this)">
             <%-- Datos del paciente a buscar --%>
            <fieldset>   
                

@@ -30,7 +30,7 @@
         </div>      
         	    
                 
-         <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/BorrarPersonalAdmin" method="post">
+         <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorrarPersonalAdmin" method="post">
               <%-- Datos del personal a buscar --%>
                 <fieldset>   
                     <label> Introduzca el identificador del personal que desee borrar:</label> 

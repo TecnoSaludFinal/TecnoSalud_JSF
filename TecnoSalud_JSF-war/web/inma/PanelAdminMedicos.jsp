@@ -26,7 +26,7 @@
         
      <h1>Bienvenido: <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %></h1>
      <br>
-     <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+     <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
      <br>
      <div id="cabz">
            <h1>Panel de control de Medico </h1>
@@ -34,7 +34,7 @@
                 <br>
 			<h3>Funcionalidades</h3>
 			<ul>
-				<li><a href="http://localhost:8080/TecnoSalud_Final-war/NuevoMedico">Crear nuevo medico</a></li>
+				<li><a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Crear nuevo medico</a></li>
 				<li><a href="BorrarMedico.jsp">Eliminar medico</a></li>
                                 <li><a href="ConsultarMedico.jsp">Consultar medico</a></li>
                                 <li><a href="ModificarMedico.jsp">Modificar datos de un medico</a></li>					

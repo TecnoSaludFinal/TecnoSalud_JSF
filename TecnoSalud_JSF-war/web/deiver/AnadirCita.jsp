@@ -33,7 +33,7 @@
         <h1>Bienvenido: <%= pa.getNombre() +" "+ pa.getApellidos() +" -- "+ pa.getIdRol().getTipoRol() %></h1>
         <br/><br/>
         
-        <form name="form" onsubmit="return validar(this)" method="POST" action="http://localhost:8080/TecnoSalud_Final-war/anadirCita">
+        <form name="form" onsubmit="return validar(this)" method="POST" action="http://localhost:8080/TecnoSalud_JSF-war/anadirCita">
             
             Nuhsa Paciente: <input type="text" name="nuhsa" id="campo1"><br/>
             Médico: <input type="text" name="medico" id="campo2"><br/>

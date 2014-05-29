@@ -21,7 +21,7 @@
 	
     </head>
     <body>
-        <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>
+        <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>
         
                           <h3 class="fl">Datos Pacientes</h3>
                         
@@ -107,7 +107,7 @@
                              
               %>
               
-               <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/editarHistorialPaciente" method="post">
+               <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/editarHistorialPaciente" method="post">
               <fieldset> 
             <legend align= "center">Historial paciente</legend>
             <% Calendar Cal= Calendar.getInstance(); 

@@ -36,7 +36,7 @@
             List<Roles> lista_rol = (List <Roles>)request.getAttribute("lista_rol");
         %>
      
-          <form name="edit" action="http://localhost:8080/TecnoSalud_Final-war/ModificarPersonalAdminM" method="post">
+          <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarPersonalAdminM" method="post">
                 <fieldset> 
                         <legend align= "left">
                                 Datos del personal a modificar

@@ -30,7 +30,7 @@
         <h1>Bienvenido: <%= p.getNombre() +" "+ p.getApellidos() +" -- "+ p.getIdRol().getTipoRol() %></h1>
         <br/><br/>
         
-        <form name="form" onsubmit="return validar(this)" method="POST" action="http://localhost:8080/TecnoSalud_Final-war/peticion">
+        <form name="form" onsubmit="return validar(this)" method="POST" action="http://localhost:8080/TecnoSalud_JSF-war/peticion">
             
             Tipo de solicitud: <select name="cita">
             <%

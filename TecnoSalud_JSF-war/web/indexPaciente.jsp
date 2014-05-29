@@ -24,7 +24,7 @@
             }
         %>
         <br>
-        <form method="POST" action="/TecnoSalud_Final-war/PersonalAdministrativoLogin">
+        <form method="POST" action="/TecnoSalud_JSF-war/PersonalAdministrativoLogin">
             DNI: <input type="text" name="dni" id="dni">
             Contraseña: <input type="password" id="pass" name="pass">
         
