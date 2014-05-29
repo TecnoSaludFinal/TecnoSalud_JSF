@@ -108,6 +108,8 @@
         <br>         
         <a href="faces/inma/ListadoPA.xhtml">Listado del Personal Administrativo del hospital</a>
         <br>
+        <a href="faces/inma/ListadoMensajes.xhtml">Listado de los mensajes</a>
+        <br>
         
         
          <h4>Consulta de Citas</h4><br>

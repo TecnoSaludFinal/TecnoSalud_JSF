@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Listado de mensajes</title>
+    </h:head>
+    <h:body>
+        <h1>
+            Listado de mensajes del Hospital
+        </h1>      
+       
+
+        <h:form>
+            <h:dataTable value="#{listadoMensajesBean.listaMen}" var="lista">
+            <h:column>
+                <f:facet name="header">
+                   ID Mensaje
+                </f:facet>
+                #{lista.idMensajes}
+            </h:column>
+            <h:column>
+                 <f:facet name="header">
+                   Fecha
+                </f:facet>
+                #{lista.fecha}
+            </h:column>
+            <h:column>
+                 <f:facet name="header">
+                   Hora
+                </f:facet>
+                #{lista.hora}
+            </h:column> 
+            <h:column>
+                 <f:facet name="header">
+                   Remitente
+                </f:facet>
+                #{lista.remitente}
+            </h:column>             
+            <h:column>
+                 <f:facet name="header">
+                   Estado
+                </f:facet>
+                #{lista.estado}
+            </h:column>    
+            <h:column>
+                <h:commandButton value="Modificar ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
+                </h:commandButton>              
+            </h:column>
+             <h:column>
+                <h:commandButton value="Ver ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
+                </h:commandButton>              
+            </h:column>
+             
+            
+        </h:dataTable>
+        </h:form>
+        
+    </h:body>
+</html>
+

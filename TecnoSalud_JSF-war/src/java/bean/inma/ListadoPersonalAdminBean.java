@@ -25,8 +25,7 @@ import javax.faces.bean.ManagedBean;
 public class ListadoPersonalAdminBean 
 {
     @EJB
-    private PersonalAdministrativoFacadeLocal pAdminFacadelocal;
-    
+    private PersonalAdministrativoFacadeLocal pAdminFacadelocal;    
     private List <PersonalAdministrativo> listaPAdmin; 
     
     // Add business logic below. (Right-click in editor and choose
