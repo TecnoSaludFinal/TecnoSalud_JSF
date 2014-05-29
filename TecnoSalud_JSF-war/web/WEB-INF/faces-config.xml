@@ -15,4 +15,5 @@
             <to-view-id>/deiver/modificado.html</to-view-id>
         </navigation-case>
     </navigation-rule>
+
 </faces-config>

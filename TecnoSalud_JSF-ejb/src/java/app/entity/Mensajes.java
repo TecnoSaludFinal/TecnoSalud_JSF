@@ -7,6 +7,7 @@
 package app.entity;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -161,6 +162,10 @@ public class Mensajes implements Serializable {
     @Override
     public String toString() {
         return "app.entity.Mensajes[ idMensajes=" + idMensajes + " ]";
+    }
+
+    public void setFecha(DateFormat dateFormat) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
