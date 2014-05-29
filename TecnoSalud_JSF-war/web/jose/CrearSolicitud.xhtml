@@ -8,19 +8,32 @@
     </h:head>
     <h:body>
         <br/>
-        <h:form>
-            Asunto:
-            <h:inputText id="asunto" value="#{crearsolicituddatos.asunto}" size="62"/><br/><br/>
+                <h:form>
+           
+            Remitente:
+            <h:outputText id="remitente" value="#{crearsolicituddatos.remitente}" /><br/><br/>
             
+            Destinatario:
+            <h:outputText id="destinatario" value="#{crearsolicituddatos.destinatario}"/><br/><br/>
+           
+            Hora:
+            <h:outputText id="hora" value="#{crearsolicituddatos.hora}"/><br/><br/>
+            
+            Tipo Mensaje:
+            <h:outputText id="tipo" value="#{crearsolicituddatos.tipo_mensaje}"/><br/><br/>
+            
+            Estado:
+            <h:outputText id="estado" value="#{crearsolicituddatos.estado}"/><br/><br/>
+           
+            Fecha:
+            <h:outputText id="fecha" value="#{crearsolicituddatos.fecha}">
+            <f:convertDateTime pattern="yyyy-MM-dd" />
+            <h:message for="fecha" style="color:red" />
+            </h:outputText> <br/><br/>
             Descripcion:<br/>
-            <h:inputTextarea value="#{crearsolicituddatos.descripcion}" cols="40" rows="10"/><br/><br/>
-            <p> Mostrar sólo la fecha y la datestyle es <i> short </i> </p>
-            <h:outputText value="#{crearsolicituddatos.fecnac}">
- <f:convertDateTime type="date" dateStyle="short" />
- </h:outputText>
-
-
-            <h:commandButton value="Enviar" action="#{crearsolicituddatos.doNavigation()}" class="blue">
+            <h:inputTextarea value="#{crearsolicituddatos.contenido}" cols="40" rows="10"/><br/><br/>
+            
+            <h:commandButton value="Enviar" action="#{crearsolicituddatos.Crear()}" class="blue">
                    
             </h:commandButton>
         </h:form>

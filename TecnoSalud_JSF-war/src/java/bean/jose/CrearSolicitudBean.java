@@ -38,52 +38,140 @@ public class CrearSolicitudBean {
     @EJB
     private MensajesFacadeLocal mensajesFacade;
     
-    private String asunto;
-    private String descripcion;
-    private Integer medicoId;
-    private Date fecnac=new Date();
-
-    public Date getFecnac() {
-        return fecnac;
-    }
-
-    public void setFecnac(Date fecnac) {
-        this.fecnac = fecnac;
-    }
-
-
+    private Integer id;
+    private String contenido;
+    private Date fecha = new Date();
+    private String hora;
+    private String remitente;
+    private String destinatario;
+    private String tipo_mensaje;
+    private String estado;
     
-    List<Medicos> medicos;
-    Administrador admin;
+    List<Mensajes> listaMensajes;
 
-    public String getAsunto() {
-        return asunto;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAsunto(String asunto) {
-        this.asunto = asunto;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getContenido() {
+        return contenido;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
 
-    public Integer getMedicoId() {
-        return medicoId;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setMedicoId(Integer medicoId) {
-        this.medicoId = medicoId;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHora() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+        
+        Integer hour = cal.get(Calendar.HOUR);
+        Integer minu = cal.get(Calendar.MINUTE);
+        Integer segu = cal.get(Calendar.SECOND);
+        
+        hora = hour+":"+minu+":"+segu;
+        
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public String getRemitente() {
+        
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
+        Medicos p = (Medicos) sesion.getAttribute("entidad");
+        remitente = p.getDni();
+        
+        return remitente;
+    }
+
+    public void setRemitente(String remitente) {
+        this.remitente = remitente;
+    }
+
+    public String getDestinatario() {
+        destinatario= "Administrador";
+        return destinatario;
+    }
+
+    public void setDestinatario(String destinatario) {
+        this.destinatario = destinatario;
+    }
+
+    public String getTipo_mensaje() {
+        tipo_mensaje= "CambioDatosPersonalesMedico";
+        
+        return tipo_mensaje;
+    }
+
+    public void setTipo_mensaje(String tipo_mensaje) {
+        this.tipo_mensaje = tipo_mensaje;
+    }
+
+    public String getEstado() {
+        return estado ="P";
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public List<Mensajes> getListaMensajes() {
+        return listaMensajes;
+    }
+
+    public void setListaMensajes(List<Mensajes> listaMensajes) {
+        this.listaMensajes = listaMensajes;
     }
     
+    
+    public void Crear()
+    {
+        
+       
+        Mensajes m = new Mensajes();
+        
+        listaMensajes = (List<Mensajes>) mensajesFacade.findAll();
+        id = listaMensajes.size() + 1;
+        
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+        Integer hour = cal.get(Calendar.HOUR);
+        Integer minu = cal.get(Calendar.MINUTE) + 1;
+        Integer segu = cal.get(Calendar.SECOND);
+        String h = hour+":"+minu+":"+segu;
+        
+        m.setIdMensajes(id);
+        m.setContenido(contenido);
+        m.setFecha(fecha);
+        m.setHora(h);
+        m.setRemitente(remitente);
+        m.setDestinatario(destinatario);
+        m.setTipoMensaje(tipo_mensaje);
+        m.setEstado(estado);
+        
+        mensajesFacade.create(m);
+    }
+   /*
     public String doNavigation() throws ParseException
     {
         FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
-        HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
+     H   HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
         Integer numElem = mensajesFacade.findAll().size();
         Medicos p = (Medicos) sesion.getAttribute("entidad");
 
@@ -113,7 +201,7 @@ public class CrearSolicitudBean {
         
     }
 
-    
+    */
     
     /**
      * Creates a new instance of CrearSolicitudBean
