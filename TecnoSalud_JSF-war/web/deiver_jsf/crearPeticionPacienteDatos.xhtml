@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            
+            Remitente:
+            <h:inputText id="remitente" value="#{pacientePeticionDatos.remitente}" size="20"/><br/><br/>
+            
+            Destinatario:
+            <h:inputText id="destinatario" value="#{pacientePeticionDatos.destinatario}" size="20"/><br/><br/>
+            
+            Fecha:
+            <h:outputText id="fecha" value="#{pacientePeticionDatos.fecha}">
+            <f:convertDateTime pattern="yyyy-MM-dd" />
+            
+            <h:message for="fecha" style="color:red" />
+            </h:outputText> <br/><br/>
+            Hora:
+            <h:outputText id="hora" value="#{pacientePeticionDatos.hora}"/><br/><br/>
+            
+            Tipo Mensaje:
+            <h:inputText id="tipo" value="#{pacientePeticionDatos.tipo_mensaje}" size="10"/><br/><br/>
+            
+            Estado:
+            <h:inputText id="estado" value="#{pacientePeticionDatos.estado}" label="P" size="1"/><br/><br/>
+            
+            Descripcion:<br/>
+            <h:inputTextarea value="#{pacientePeticionDatos.contenido}" cols="40" rows="10"/><br/><br/>
+            
+            <h:commandButton value="Enviar" action="#{pacientePeticionDatos.Crear()}" class="blue">
+                   
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

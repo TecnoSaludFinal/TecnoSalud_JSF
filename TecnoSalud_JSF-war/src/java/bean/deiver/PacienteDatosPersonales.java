@@ -12,6 +12,7 @@ import app.entity.Roles;
 import java.sql.Date;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.HttpSession;
 
@@ -37,7 +38,9 @@ public class PacienteDatosPersonales
 
     public Pacientes getP()
     {
-        p = (Pacientes) pacientesFacade.findByDni("11111111P");
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        session = (HttpSession) context.getExternalContext().getSession(true);
+        p = (Pacientes) session.getAttribute("entidad");
         return p;
     }
 

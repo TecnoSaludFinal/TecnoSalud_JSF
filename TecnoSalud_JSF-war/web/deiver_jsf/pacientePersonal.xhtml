@@ -7,40 +7,43 @@
         <title>Datos Personales - Paciente</title>
     </h:head>
     <h:body>
-        <h:dataTable value="#{pacienteDatosPersonales.p}" var="pac">
-            <h:column>
-                <f:facet name="header">
-                   Nombre
-                </f:facet>
-                #{pac.nombre}
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                   Apellidos
-                </f:facet>
-                #{pac.apellidos}
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                   DNI
-                </f:facet>
-                #{pac.dni}
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                   Contraseña
-                </f:facet>
-                #{pac.contrasena}
-            </h:column>
-            <h:column>
-                <f:facet name="header">
-                   Direccion
-                </f:facet>
-                #{pac.direccion}
-            </h:column>
+        <h:form>
+            <h:dataTable value="#{pacienteDatosPersonales.p}" var="pac">
+                <h:column>
+                    <f:facet name="header">
+                       Nombre
+                    </f:facet>
+                    #{pac.nombre}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       Apellidos
+                    </f:facet>
+                    #{pac.apellidos}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       DNI
+                    </f:facet>
+                    #{pac.dni}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       Contraseña
+                    </f:facet>
+                    #{pac.contrasena}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       Direccion
+                    </f:facet>
+                    #{pac.direccion}
+                </h:column>
                                              
-        </h:dataTable>
-
+            </h:dataTable>
+            
+            <h:link hreflang="faces/deiver_jsf/crearPeticionPacienteDatos.xhtml">Solicitar</h:link>
+        </h:form>
     </h:body>
 </html>
 
