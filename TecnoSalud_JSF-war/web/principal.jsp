@@ -93,7 +93,17 @@
          <h1>Bienvenido: <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %></h1>
         
         <a href="inma/PanelAdminMedicos.jsp">Panel de control de Medicos</a>
+        <br>
+        <br>
         <a href="inma/PanelAdminPersonalAdmin.jsp">Panel de control de Personal Administrativo</a>
+        <br>
+        <br>
+        <a href="faces/inma/ListadoMedicos.xhtml">Listado de Medicos</a>
+        <br>
+        <br>
+        <a href="faces/inma/ListadoPersonalAdmin.xhtml">Listado de Personal Administrativo</a>
+        <br>
+        <br>
         
          <h4>Consulta de Citas</h4><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
