@@ -21,7 +21,7 @@
 	
     </head>
     <body>
-        <a href="http://localhost:8080/TecnoSalud_Final-war/logoutServlet"> Salida </a>	
+        <a href="http://localhost:8080/TecnoSalud_JSF-war/logoutServlet"> Salida </a>	
         
 						<h3 class="fl">Formularios</h3>
 											
@@ -36,7 +36,7 @@
                  %>
 
             
-            <form name="new" action="http://localhost:8080/TecnoSalud_Final-war/ConsultarFormulario method="post">
+            <form name="new" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario method="post">
            
            <fieldset>   
             <label> Seleccione la queja/sugerencia que desea consultar. </label> 
