@@ -41,6 +41,7 @@ public class PacienteListadoMensaje
         p = (Pacientes) session.getAttribute("entidad");
         
         listaMensajes = (List<Mensajes>) mensajesFacade.findAllByRemi(p.getDni());
+        
         return listaMensajes;
     }
 
