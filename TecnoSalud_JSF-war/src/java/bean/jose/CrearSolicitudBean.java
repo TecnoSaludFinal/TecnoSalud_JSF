@@ -23,7 +23,9 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -31,7 +33,7 @@ import javax.servlet.http.HttpSession;
  * @author JoseAntonio
  */
 @ManagedBean(name="crearsolicituddatos")
-@RequestScoped
+@SessionScoped
 public class CrearSolicitudBean {
     @EJB
     private MedicosFacadeLocal medicosFacade;
@@ -114,7 +116,7 @@ public class CrearSolicitudBean {
     }
 
     public String getTipo_mensaje() {
-        tipo_mensaje= "CambioDatosPersonalesMedico";
+        tipo_mensaje= "CPM";
         
         return tipo_mensaje;
     }
@@ -166,42 +168,8 @@ public class CrearSolicitudBean {
         m.setEstado(estado);
         
         mensajesFacade.create(m);
-    }
-   /*
-    public String doNavigation() throws ParseException
-    {
-        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
-     H   HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
-        Integer numElem = mensajesFacade.findAll().size();
-        Medicos p = (Medicos) sesion.getAttribute("entidad");
-
-        //EnviarSolicitud enviar = new EnviarSolicitud();
-      //  enviar.enviar(admin.getEmail(), asunto, descripcion);
-        Mensajes mens = new Mensajes();
-        
-       
-       Date fecha=new Date(); 
- 
-             
-       
-        mens.setIdMensajes(numElem+1);
-        mens.setContenido(descripcion);
-        mens.setFecha();
-        mens.setHora();
-        mens.setDestinatario("Administrador");
-        mens.setRemitente(p.getDni());
-        mens.setTipoMensaje("CambioDatosPersonales");
-        mens.setEstado("P");
-        
-        
-        mensajesFacade.create(mens);
-        
-        
-        return "CrearSolicitudBean";
-        
-    }
-
-    */
+  }
+   
     
     /**
      * Creates a new instance of CrearSolicitudBean

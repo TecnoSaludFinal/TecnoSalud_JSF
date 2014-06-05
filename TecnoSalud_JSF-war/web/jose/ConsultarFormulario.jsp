@@ -73,8 +73,8 @@
                             }
             %>
         </table>
-            <%-- Botón buscar --%>
-            <input type="submit" name="btnEnviar" value="Enviar">
+            
+           
 	</fieldset>
 
             </form>

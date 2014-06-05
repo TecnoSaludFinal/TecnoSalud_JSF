@@ -28,10 +28,7 @@
            <fieldset>   
                
             <label> Introduzca los datos necesarios para la busqueda de paciente:</label> 
-            <br><br>
-            <label for="nombrePaciente"> Nombre del paciente:</label>
-            <input type="text" name="nombrePaciente" value="">
-            <br>
+           
             <label for="nuhsa">Numero Seguridad Social:</label>
             <input type="text" name="nuhsa" value="">
             <br><br>
