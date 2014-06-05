@@ -8,20 +8,23 @@ package bean.deiver;
 
 import app.dao.MensajesFacadeLocal;
 import app.entity.Mensajes;
+import app.entity.Pacientes;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Deiver
  */
-@Named(value = "pacientePeticionDatos")
-@RequestScoped
+@ManagedBean(name = "pacientePeticionDatos")
+@SessionScoped
 public class PacientePeticionDatos
 {
     @EJB
@@ -70,11 +73,11 @@ public class PacientePeticionDatos
         this.contenido = contenido;
     }
 
-    public Date getFecha() {
+    public java.util.Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(java.util.Date fecha) {
         this.fecha = fecha;
     }
 
@@ -97,6 +100,12 @@ public class PacientePeticionDatos
     }
 
     public String getRemitente() {
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+        Pacientes p = (Pacientes) session.getAttribute("entidad");
+        
+        remitente = p.getDni();
+        
         return remitente;
     }
 
@@ -105,6 +114,7 @@ public class PacientePeticionDatos
     }
 
     public String getDestinatario() {
+        destinatario = "PA";
         return destinatario;
     }
 
@@ -113,6 +123,7 @@ public class PacientePeticionDatos
     }
 
     public String getTipo_mensaje() {
+        tipo_mensaje = "cambioDato";
         return tipo_mensaje;
     }
 
@@ -121,6 +132,7 @@ public class PacientePeticionDatos
     }
 
     public String getEstado() {
+        estado = "P";
         return estado;
     }
 
@@ -136,20 +148,25 @@ public class PacientePeticionDatos
         this.listaMensajes = listaMensajes;
     }
     
-    public void Crear()
+    public String Crear()
     {
+        if(remitente.isEmpty())
+        {
+            return "entidadNula";
+        }
         Mensajes m = new Mensajes();
-        
+
         listaMensajes = (List<Mensajes>) mensajesFacade.findAll();
         id = listaMensajes.size() + 1;
-        
+
         Calendar cal = Calendar.getInstance();
         cal.setTime(fecha);
+
         Integer hour = cal.get(Calendar.HOUR);
-        Integer minu = cal.get(Calendar.MINUTE) + 1;
+        Integer minu = cal.get(Calendar.MINUTE);
         Integer segu = cal.get(Calendar.SECOND);
         String h = hour+":"+minu+":"+segu;
-        
+
         m.setIdMensajes(id);
         m.setContenido(contenido);
         m.setFecha(fecha);
@@ -158,11 +175,9 @@ public class PacientePeticionDatos
         m.setDestinatario(destinatario);
         m.setTipoMensaje(tipo_mensaje);
         m.setEstado(estado);
-        
+
         mensajesFacade.create(m);
+        
+        return "modificado";
     }
-    
-    
-    
-    
 }

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:dataTable value="#{pacienteListadoMensaje.listaMensajes}" var="lis">
+            <h:column>
+                <f:facet name="header">
+                    Destinatario
+                </f:facet>
+                ${lis.destinatario}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    Fecha
+                </f:facet>
+                <h:outputText id="fecha" value="#{lis.fecha}">
+                    <f:convertDateTime pattern="yyyy-MM-dd" />
+            
+                    <h:message for="fecha" style="color:red" />
+                </h:outputText>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    Hora
+                </f:facet>
+                ${lis.hora}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    tipoMensaje
+                </f:facet>
+                ${lis.tipoMensaje}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    Estado
+                </f:facet>
+                ${lis.estado}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">
+                    Contenido
+                </f:facet>
+                ${lis.contenido}
+                <f:validateLength minimum="10"/>
+            </h:column>
+        </h:dataTable>
+        
+        <h:button outcome="/principal.jsp" value="Volver"></h:button>
+    </h:body>
+</html>
+

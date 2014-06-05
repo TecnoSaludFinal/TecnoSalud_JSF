@@ -7,9 +7,12 @@
 package app.dao;
 
 import app.entity.Mensajes;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +31,24 @@ public class MensajesFacade extends AbstractFacade<Mensajes> implements Mensajes
     public MensajesFacade() {
         super(Mensajes.class);
     }
+
+    @Override
+    public List<Mensajes> findAllByRemi(String r)
+    {
+        List<Mensajes> lista;
+        Query q;
+        try
+        {
+            q = em.createNamedQuery("Mensajes.findByRemitente").setParameter("remitente", r);
+            lista = (List<Mensajes>) q.getResultList();
+            
+        }catch(NoResultException e)
+        {
+            return null;
+        }
+        return lista;
+    }
+    
+    
     
 }

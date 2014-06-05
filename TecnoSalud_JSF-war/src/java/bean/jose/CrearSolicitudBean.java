@@ -168,13 +168,52 @@ public class CrearSolicitudBean {
         m.setEstado(estado);
         
         mensajesFacade.create(m);
+
   }
-   
+
+       public CrearSolicitudBean() {
+    }
+    
+}
+
+       /*
+    public String doNavigation() throws ParseException
+    {
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+     H   HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
+        Integer numElem = mensajesFacade.findAll().size();
+        Medicos p = (Medicos) sesion.getAttribute("entidad");
+
+        //EnviarSolicitud enviar = new EnviarSolicitud();
+      //  enviar.enviar(admin.getEmail(), asunto, descripcion);
+        Mensajes mens = new Mensajes();
+        
+       
+       Date fecha=new Date(); 
+ 
+             
+       
+        mens.setIdMensajes(numElem+1);
+        mens.setContenido(descripcion);
+        //mens.setFecha();
+        //mens.setHora();
+        mens.setDestinatario("Administrador");
+        mens.setRemitente(p.getDni());
+        mens.setTipoMensaje("CambioDatosPersonales");
+        mens.setEstado("P");
+        
+        
+        mensajesFacade.create(mens);
+        
+        
+        return "CrearSolicitudBean";
+        
+    }
+
+    */
+
     
     /**
      * Creates a new instance of CrearSolicitudBean
      */
-    public CrearSolicitudBean() {
-    }
-    
-}
+

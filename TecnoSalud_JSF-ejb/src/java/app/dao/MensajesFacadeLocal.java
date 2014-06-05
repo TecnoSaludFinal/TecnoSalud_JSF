@@ -31,4 +31,6 @@ public interface MensajesFacadeLocal {
 
     int count();
     
+    List<Mensajes> findAllByRemi(String r);
+    
 }

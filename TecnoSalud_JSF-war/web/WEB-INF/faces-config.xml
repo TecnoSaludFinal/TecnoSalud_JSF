@@ -5,14 +5,14 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <navigation-rule>
-        <from-view-id>/pacientePersonal.xhml</from-view-id>
+        <from-view-id>/crearPeticionPacienteDatos.xhml</from-view-id>
         <navigation-case>
             <from-outcome>entidadNula</from-outcome>
             <to-view-id>/error.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>success</from-outcome>
-            <to-view-id>/deiver/modificado.html</to-view-id>
+            <from-outcome>modificado</from-outcome>
+            <to-view-id>/modificado.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 
