@@ -44,7 +44,7 @@
          
             
             <%-- <input type="submit" name="btnVolver" value="Volver"> --%>
-            <a href="inma/PanelAdminMedicos.jsp">Volver al panel administracion</a>
+            <a href="principal.jsp">Volver al panel principal</a>
             
         </div>
                   

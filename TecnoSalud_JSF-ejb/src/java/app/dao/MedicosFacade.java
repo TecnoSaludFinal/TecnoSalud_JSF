@@ -91,8 +91,6 @@ public class MedicosFacade extends AbstractFacade<Medicos> implements MedicosFac
         return m;
     }
     
-    //Jose Antonio
-    
     @Override
     public List<Medicos> findByNombre(String apellidos) {
         
@@ -161,5 +159,24 @@ public class MedicosFacade extends AbstractFacade<Medicos> implements MedicosFac
         }
         
         return m;
+    }
+    
+    public Medicos getIdByDni (Integer num)
+    {
+        
+        Medicos m;
+        Query q;        
+        try
+        {
+            q = em.createQuery("SELECT m FROM Medicos m WHERE m.dni = :dni").setParameter("id", num);
+            m = (Medicos) q.getSingleResult();
+        }
+        catch(NoResultException e)
+        {
+            return null;
+        }
+        
+        return m;
+        
     }
 }

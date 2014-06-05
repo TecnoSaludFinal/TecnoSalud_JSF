@@ -45,4 +45,6 @@ public interface MedicosFacadeLocal {
     
     List<Medicos> findByIdAllEspecialidad(String especialidad);
     
+    Medicos getIdByDni (Integer dni);
+    
 }

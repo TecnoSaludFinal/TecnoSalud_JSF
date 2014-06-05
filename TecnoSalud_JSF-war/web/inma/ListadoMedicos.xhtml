@@ -44,18 +44,13 @@
                 </f:facet>
                 #{lis.idEspecialidad.nombre}
             </h:column>   
+                        
             <h:column>
-                <h:commandButton value="Modificar ..." onclick="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
-                </h:commandButton>              
-            </h:column>
-                
-            <h:column>
-                <h:button  outcome="/inma/ModificarMedico.jsp" >prueba</h:button>
+                <h:button  outcome="/inma/ModificarMedico.jsp" value="Modificar ... "></h:button>
             </h:column>    
                 
             <h:column>
-                <h:commandButton value="Borrar ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
-                </h:commandButton>            
+                 <h:button  outcome="/inma/BorrarMedico.jsp" value="Borrar ... "></h:button>         
             </h:column>    
                 
              

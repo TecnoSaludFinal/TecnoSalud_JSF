@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Listado de mensajes</title>
     </h:head>
@@ -22,7 +23,7 @@
                  <f:facet name="header">
                    Fecha
                 </f:facet>
-                #{lista.fecha}
+                #{lista.fecha.date}-#{lista.fecha.month}-#{lista.fecha.year}
             </h:column>
             <h:column>
                  <f:facet name="header">
@@ -49,13 +50,20 @@
                 #{lista.tipoMensaje}
             </h:column>      
             <h:column>
-                <h:commandButton value="Modificar ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
-                </h:commandButton>              
-            </h:column>
-            <h:column>
-                <h:commandButton value="Ver ..." action="http://localhost:8080/TecnoSalud_JSF-war/inma/ModificarMedico.jsp" >                    
-                </h:commandButton>              
-            </h:column>
+                <c:if #{lista.tipoMensaje=='M'}>
+                    <h:button  outcome="/inma/ModificarMedico.jsp" value="Modificar ... "></h:button>
+                </c:if>
+                <c:if #{lista.tipoMensaje=='B'}>
+                    <h:button  outcome="/inma/BorrarMedico.jsp" value="Borrar ... "></h:button>
+                </c:if>
+            </h:column>    
+                <c:if ()>
+                    <h:button  outcome="/inma/BorrarMedico.jsp" value="Borrar ... "></h:button>
+                </c:if>
+                <c:if>
+                    <h:button  outcome="/inma/BorrarPersonalAdmin.jsp" value="Borrar ... "></h:button>
+                </c:if>-->
+           
              
             
         </h:dataTable>
