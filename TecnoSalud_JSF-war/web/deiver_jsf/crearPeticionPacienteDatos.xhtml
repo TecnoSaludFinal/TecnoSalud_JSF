@@ -11,14 +11,14 @@
         <h:form>
             
             Remitente:
-            <h:inputText id="remitente" value="#{pacientePeticionDatos.remitente}" size="20"/><br/><br/>
+            <h:outputText id="remitente" value="#{pacientePeticionDatos.remitente}"/><br/><br/>
             
             Destinatario:
-            <h:inputText id="destinatario" value="#{pacientePeticionDatos.destinatario}" size="20"/><br/><br/>
+            <h:outputText id="destinatario" value="#{pacientePeticionDatos.destinatario}"/><br/><br/>
             
             Fecha:
             <h:outputText id="fecha" value="#{pacientePeticionDatos.fecha}">
-            <f:convertDateTime pattern="yyyy-MM-dd" />
+                <f:convertDateTime pattern="yyyy-MM-dd" />
             
             <h:message for="fecha" style="color:red" />
             </h:outputText> <br/><br/>
@@ -26,10 +26,10 @@
             <h:outputText id="hora" value="#{pacientePeticionDatos.hora}"/><br/><br/>
             
             Tipo Mensaje:
-            <h:inputText id="tipo" value="#{pacientePeticionDatos.tipo_mensaje}" size="10"/><br/><br/>
+            <h:outputText id="tipo" value="#{pacientePeticionDatos.tipo_mensaje}"/><br/><br/>
             
             Estado:
-            <h:inputText id="estado" value="#{pacientePeticionDatos.estado}" label="P" size="1"/><br/><br/>
+            <h:outputText id="estado" value="#{pacientePeticionDatos.estado}"/><br/><br/>
             
             Descripcion:<br/>
             <h:inputTextarea value="#{pacientePeticionDatos.contenido}" cols="40" rows="10"/><br/><br/>

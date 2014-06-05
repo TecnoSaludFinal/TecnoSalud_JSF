@@ -186,8 +186,8 @@ public class CrearSolicitudBean {
        
         mens.setIdMensajes(numElem+1);
         mens.setContenido(descripcion);
-        mens.setFecha();
-        mens.setHora();
+        //mens.setFecha();
+        //mens.setHora();
         mens.setDestinatario("Administrador");
         mens.setRemitente(p.getDni());
         mens.setTipoMensaje("CambioDatosPersonales");
