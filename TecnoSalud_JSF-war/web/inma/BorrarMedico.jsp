@@ -40,7 +40,8 @@
                                     INICIO
                                 </a>
                             </li>
-                            <li>CITAS</a>
+                            <li>
+                                CITAS
                                 <ul>
                                     <li><a href="http://localhost:8080/TecnoSalud_JSFl-war/ConsultarListadoCitas?do=all">
                                     Consultar citas de hoy
@@ -69,36 +70,42 @@
                                 </ul>
                             <li><a href="ListadoMensajes.xhtml">MENSAJES</a>
                             </li>
-                            <li><a href="#">FORMULARIOS</a>
-                                <ul id="navlist2"><a href="jose/especifico.jsp">
+                            <li>
+                                FORMULARIOS
+                                <ul>
+                                <li><a href="jose/especifico.jsp">
                                     Consultar formularios de paciente especifico
                                     </a>
-                                </ul>
-                                <ul id="navlist2"><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=all">
+                                </li>
+                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=all">
                                     Consultar todos los formularios recibidos
                                     </a>
-                                </ul>
-                                <ul id="navlist2"><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=quejas">
+                                </li>
+                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=quejas">
                                     Consultar los formularios de quejas
                                     </a>
-                                </ul>
-                                <ul id="navlist2"><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=sug">
+                                </li>
+                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=sug">
                                     Consultar los formularios de sugerencias
                                     </a>
-                                </ul>
-                                <ul id="navlist2"><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=feli">
+                                </li>
+                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=feli">
                                     Consultar los formularios de felicitaciones
                                     </a>
-                                </ul>                               
+                                </li>                               
+                                </ul>
                             </li>
-                            <li><a href="#">LISTADOS</a>
-                                <ul id="navlist2"><a href="face/inma/ListadoMedicos.xhtml">
+                            <li>
+                                LISTADOS
+                                <ul>
+                                <li><a href="face/inma/ListadoMedicos.xhtml">
                                     Listado de Medicos del hospital
                                     </a>
-                                </ul>
-                                <ul id="navlist2"><a href="face/inma/ListadoPA.xhtml">
+                                </li>
+                                <li><a href="face/inma/ListadoPA.xhtml">
                                     Listado de Personal Administrativo del hospital
                                     </a>
+                                </li>
                                 </ul>
                             </li>                            
                     </ul>
@@ -123,14 +130,14 @@
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Commercial Properties" />
+                            <img src="../estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
                                 seleccionado.<br/><br/>
                                 <a href="ConsultarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Deluxe Properties" />
+                            <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
                                 <a href="NuevoMedico.jsp">Ir ...</a></p>
                         </div>

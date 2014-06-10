@@ -216,7 +216,7 @@
                             <h3>Crear Médico</h3>
                             <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="inma/NuevoMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
                              <h3>Crear Personal Administrativo</h3>
