@@ -24,12 +24,93 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 #trees {background:url("images/trees.jpg") no-repeat;width:139px;height:76px;float:right;margin-top:53px;margin-right:10px}
 /* menu */
 #navcontainer {text-align:left;height:40px;float:left;width:800px}
-#navlist {padding-top:0}
-#navlist ul {margin:0;padding:0 0 0 7%;color:#fff;font-size:.65em;letter-spacing:2px;font-weight:bold}
-#navlist li {display:inline;list-style-type:none}
-#navlist li a {padding:1em 12px;color:#d7cca2;text-decoration:none;float:left}
+.navlist 
+{
+    list-style-type: none;
+    padding-top:0;
+    margin: 0 auto;
+    padding: 0;
+    color:#fff;
+    font-size:1 em;
+    letter-spacing:2px;
+    font-weight:bold;
+   
+}
+//#navlist ul {margin:0;padding:0 0 0 7%;}
+.navlist br
+{
+    display: none;
+}
+.navlist li 
+{
+    display:block;
+    float: left;
+    list-style: none;
+    position: relative;
+    list-style-type:none;
+    height: 40px;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+.navlist li a 
+{
+    padding:1em 12px;
+    color:#d7cca2;
+    text-decoration:none;
+    float:left;
+    display: block;
+    font-size: 13px;
+    margin: 6px;
+}
+.navlist ul
+{
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 40px;
+}
+.navlist li:hover>ul {opacity:1;}
+
+.navlist ul li
+{
+   height: 0;
+   overflow: hidden;
+   padding: 0;
+}
+
+.navlist li:hover>ul li 
+{
+    overflow: visible;
+    padding: 0;
+}
+
+.navlist ul li a
+{
+    border: none;
+    margin: 0;
+}
+/*
 #navlist li a:hover {color:#fff;background:#42361b}
 #navlist #current {color:#fff;text-decoration:none;background:#42361b;text-align:left}
+.ul
+{
+    list-style: none;
+}
+.ul#navlist li
+{
+    float: left;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+.ul#navlist li:hover ul
+{
+    display: block;
+}
+
+*/
+
 /* search form */
 #search {float:right;height:40px;width:200px;border:1px solid red}
 #searchwrapper {width:200px;height:30px;padding:0;margin-top:5px;position:relative;float:right}

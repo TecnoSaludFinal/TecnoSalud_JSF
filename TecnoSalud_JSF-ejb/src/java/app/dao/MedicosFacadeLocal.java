@@ -47,4 +47,6 @@ public interface MedicosFacadeLocal {
     
     Medicos getIdByDni (Integer dni);
     
+    List<Medicos> findAllOrderById ();
+    
 }
