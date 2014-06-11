@@ -75,9 +75,9 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
         
          // Lista de medicos para el id      
          List <Medicos> m;
-         m = (List <Medicos>)facadeMedico.findAll();
+         m = (List <Medicos>)facadeMedico.findAllOrderById();
          
-         Integer id_medico = (m.size()+1);
+       
          
          String dni_m = (String)request.getParameter("dni");
          String nombre = (String)request.getParameter("nombre");
@@ -91,7 +91,8 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
          medico.setNombre(nombre);
          medico.setApellidos(apellidos);
          medico.setContrasena(contrasena);
-         medico.setIdMedicos(id_medico);         
+  //       medico.setIdMedicos(id_medico);  
+        
          
          Especialidad esp;
          Roles r;
@@ -106,10 +107,12 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
         facadeMedico.create(medico);
         
         
-        rd= this.getServletContext().getRequestDispatcher("/inma/MedicoCreado.html");
+        rd= this.getServletContext().getRequestDispatcher("/inma/PanelAdminMedicos.jsp");
         rd.forward (request, response);
         
     }
+    
+   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

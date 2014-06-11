@@ -179,4 +179,27 @@ public class MedicosFacade extends AbstractFacade<Medicos> implements MedicosFac
         return m;
         
     }
+
+    @Override
+    public List<Medicos> findAllOrderById() 
+    {
+        //HistorialMedico hm;
+         List<Medicos> hm;
+        Query buscarNuhsa;
+        
+        try
+        {
+        
+        buscarNuhsa= em.createQuery("SELECT t from Medicos t ORDER BY t.idMedicos");
+                
+        
+       // hm = (HistorialMedico) buscarNuhsa.getSingleResult();
+        hm = (List<Medicos>)  buscarNuhsa.getResultList();
+        }
+        catch(NoResultException e)
+        {
+            return null;
+        }
+        return hm;
+    }
 }
