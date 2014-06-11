@@ -23,20 +23,22 @@
         <link rel="stylesheet" href="estilo/style.css" type="text/css">
 	
     </head>
-    <body>
+    <body>					
+
             <% 
                 
                 List<Citas> listaCitas = (List<Citas>) request.getAttribute("listaCitas");
                 List<Medicos> listaMedico = (List<Medicos>) request.getAttribute("listaMedico");
-                List<Medicos> listacompleta = (List<Medicos>) request.getAttribute("listacompleta");
                 String valor = (String) request.getAttribute("valor");
                 String dni= (String) session.getAttribute("dni2");
-                Integer idRol = (Integer) session.getAttribute("id");
                     String password = (String) session.getAttribute("password2");
-           if(listaCitas==null && listaMedico == null)
+                    Integer idRol = (Integer) session.getAttribute("id");   
+                if(listaCitas==null && listaMedico == null)
+                                     
+
                 {
                 %>
-<!-- navigation --> 
+ <!-- navigation --> 
            <div id="kontainer">
             <!-- header -->
             <div id="header">
@@ -129,68 +131,71 @@
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
                         
-                  
                 
-                <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi" method="post">
+           
+            <%if(listaMedico==null)
+                {
+                    %>
+                           
+            <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi" method="post">
             <%-- Datos del paciente a buscar --%>
-           <fieldset>   
-               
+                          
             <label> Introduzca los datos del médico:</label> 
             <br><br>
             
-           
-            <select name="apellidos">
-            <% for(int i=0;i<listacompleta.size();i++)		               
-            {                
-            %> 
-            <option  value="<%= listacompleta.get(i).getApellidos() %>"><%= listacompleta.get(i).getApellidos()%></option>
-            <%
-            }
-            
-                %>
-            </select>
+            <label for="ss"> Apellidos</label>
+            <input type="text" name="apellidos" value="">
            
             
             <%-- Botón buscar --%>
             <input type="submit" name="btnBuscar" value="Buscar">
-	</fieldset>
+	
 
             </form>
            
-            <%}
-           if (listaMedico != null)
-                {%>
+            <%
+                } else if (listaMedico.size()==0)
+                {
+            %>
+            <label> No hay ninguna cita disponible. Lo sentimos.</label>
+            <%
+                }
+                else
+            {
+            %>
                 <table border="1">
-                    
                         <tr>
                           <td><strong>Nº Colegiado</strong></td>
                           <td><strong>Medico</strong></td>
                           <td><strong>Especialidad</strong></td>
-                                                 </tr>
-                        <br><br>  
+                                                  </tr>  
                         
                         <%
                 for(int i=0;i<listaMedico.size();i++)
                 { %>
- <div class="property">
-                                    <div class="property_left">
-                                        
+                    <div class="property">
+                            <div class="property_left">
                          <td> <%= listaMedico.get(i).getIdMedicos()%></td>
                          <td> <%= listaMedico.get(i).getNombre() + " " + listaMedico.get(i).getApellidos()  %></td>
                          <td> <%= listaMedico.get(i).getIdEspecialidad().getNombre()%></td>
-                         <td> <a href="ConsultarListadoCitas?do=medi&perfil=<%=listaMedico.get(i).getIdMedicos()%>">Filtrar...</a> </td>
-                         </tr>
-                                    
+                         <td> <a href="ConsultarListadoCitas?do=medi&perfil=<%=listaMedico.get(i).getIdMedicos()%>">Consultar</a> </td>
               <%
+                }
                 }
                     
                 }
-                if (listaCitas != null)
-                {%> 
+                else if (listaCitas.size()==0) 
                 
+            {
+            %>
+            <label> No hay ninguna cita disponible. Lo sentimos.</label>
+            <%}else
+                
+            
+            {
+            %>
                     <%----%>
                 <table border="1">
-                   
                         <tr>
                           <td><strong>Cita</strong></td>
                           <td><strong>Seguridad Social</strong></td>
@@ -215,8 +220,7 @@
                     Integer mi = cal.get(Calendar.MINUTE);
                     Integer se = cal.get(Calendar.SECOND);
                 %>
-                           <div class="property">
-                                    <div class="property_left"> 
+                            
                 
                         
                          <tr>
@@ -234,7 +238,7 @@
                 }
                     
                     %>
-       </tr>
+</tr>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
@@ -329,6 +333,6 @@
 			<p><a href="http://www.x-reality.sk">xreality</a></p>
 		</div>
                     
-                    
+                         
     </body>
 </html>

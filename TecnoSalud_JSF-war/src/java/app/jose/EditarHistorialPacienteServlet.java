@@ -112,7 +112,7 @@ public class EditarHistorialPacienteServlet extends HttpServlet {
      fachadaHistorialMedico.create(historial);
        
         RequestDispatcher rd;
-        rd = getServletContext().getRequestDispatcher("/jose/Modificado.html");
+        rd = getServletContext().getRequestDispatcher("/jose/Peticion.jsp");
         rd.forward(request, response);
          
         

@@ -67,14 +67,25 @@ public class ConsultarListadoCitas extends HttpServlet {
        
        String accion = request.getParameter("do");
        String id = (String) request.getParameter("perfil");
+       
+       List <Medicos> listacompleta   = null;
         
        
       if(accion.equalsIgnoreCase("fec"))
+          
       {
           String fecha = (String) request.getParameter("fecha");
            
-                  
-          if (fecha != null)
+            if (fecha == null)
+            {
+               
+               
+                RequestDispatcher rd;
+                rd = getServletContext().getRequestDispatcher("/jose/buscarCitaporfecha.jsp");
+                rd.forward(request, response);
+ 
+            }
+            else if (fecha != null)
           { //buscamos por fecha indicada
               if(idRol==1) //Si es un paciente el que esta realizando la busqueda.
               {
@@ -235,16 +246,26 @@ public class ConsultarListadoCitas extends HttpServlet {
             }
       }
       else if(accion.equalsIgnoreCase("paci")){
+          
             String ss = request.getParameter("ss");
-            Integer paciente = Integer.parseInt(ss); 
+            
+           
+            if (ss == null)
+            {
                
-          if (ss != null)
+               
+                RequestDispatcher rd;
+                rd = getServletContext().getRequestDispatcher("/jose/buscarCitaporpaciente.jsp");
+                rd.forward(request, response);
+ 
+            }
+            else if (ss != null)
           { //buscamos por fecha indicada
-              
+              Integer paciente = Integer.parseInt(ss);
             listaCitas = ( List<Citas>) fachadaCitas.findAllByNuhsa(paciente);
             request.setAttribute("listaCitas", listaCitas);
             RequestDispatcher rd;
-            rd = getServletContext().getRequestDispatcher("/jose/buscarCitaporfecha.jsp");
+            rd = getServletContext().getRequestDispatcher("/jose/buscarCitaporpaciente.jsp");
             rd.forward(request, response);
               
           }
@@ -258,11 +279,22 @@ public class ConsultarListadoCitas extends HttpServlet {
       }
       else if(accion.equalsIgnoreCase("medi")){
           
-         
+        if(id==null)
+        {
           String apellidos = (String) request.getParameter("apellidos");
           
-          
-          if (apellidos != null)
+          if (apellidos == null)
+            {
+                listacompleta= (List<Medicos>) fachadaMedico.findAll();
+               
+                RequestDispatcher rd;
+                request.setAttribute("listacompleta", listacompleta);
+                rd = getServletContext().getRequestDispatcher("/jose/buscarCitapormedico.jsp");
+                rd.forward(request, response);
+ 
+            }
+         
+            else if (apellidos != null && id==null)
           { //buscamos por fecha indicada
             
             listaMedico = (List<Medicos>)  fachadaMedico.findByNombre(apellidos);
@@ -270,11 +302,12 @@ public class ConsultarListadoCitas extends HttpServlet {
             listaCitas = ( List<Citas>) fachadaCitas.findByNombre(apellidos);
             
             request.setAttribute("listaMedico", listaMedico);
+            request.setAttribute("listaCitas", listaCitas);
             
             RequestDispatcher rd;
             rd = getServletContext().getRequestDispatcher("/jose/buscarCitapormedico.jsp");
             rd.forward(request, response);
-              
+            }  
           }
           else if(id != null)
           {  

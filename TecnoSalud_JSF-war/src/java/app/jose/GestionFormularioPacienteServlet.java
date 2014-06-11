@@ -119,7 +119,7 @@ private FormularioFacadeLocal fachadaFormulario;
             fachadaFormulario.actualizar(Modpc, i);
         }
         
-            rd = getServletContext().getRequestDispatcher("/jose/Eliminado.html");
+            rd = getServletContext().getRequestDispatcher("/jose/Peticion.jsp");
         }
         else if(idRol ==4)
         {
@@ -135,7 +135,7 @@ private FormularioFacadeLocal fachadaFormulario;
             fachadaFormulario.actualizar(Modpc, i);
         }
         
-            rd = getServletContext().getRequestDispatcher("/jose/Eliminado.html");
+            rd = getServletContext().getRequestDispatcher("/jose/Peticion.jsp");
         }
         
 

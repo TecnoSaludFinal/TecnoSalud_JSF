@@ -34,7 +34,8 @@
         <a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Consultar Historial médico</a>
          <h4>Consulta de Citas</h4><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br>
-            <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br>
+    <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Consultar las citas en una fecha determinada</a> </td> <br>
+    <%-- <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br>--%>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Consultar las citas próximas</a> </td> <br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Consultar las citas pasadas</a> </td> <br>
         <h4>Formularios/Quejas</h4><br>
@@ -61,8 +62,8 @@
 
       
        <h4>Consulta de Citas</h4><br>
-            <a href="ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br>
-            <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Consultar las citas en una fecha determinada</a> </td> <br>
 
         <%
             }
@@ -77,11 +78,11 @@
         
          <h4>Consulta de Citas</h4><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
-            <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Consultar las citas en una fecha determinada</a> </td> <br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Consultar las citas próximas</a> </td> <br><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Consultar las citas pasadas</a> </td> <br><br>
-            <a href="jose/buscarCitaporpaciente.jsp">Consultar las citas por paciente</a> </td> <br><br>  
-            <a href="jose/buscarCitapormedico.jsp">Consultar las citas por medico</a> </td> <br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Consultar las citas por paciente</a> </td> <br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Consultar las citas por medico</a> </td> <br><br>
         
         <h4>Consulta de Pacientes</h4>
             <a href="arkadiusz/bienvenido.jsp">Menú de Pacientes</a> </td> <br><br>
@@ -109,15 +110,14 @@
         
          <h4>Consulta de Citas</h4><br>
 
-            <a href="http://localhost:8080/TecnoSalud_JSFl-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
-
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
-
-            <a href="jose/buscarCitaporfecha.jsp">Consultar las citas en una fecha determinada</a> </td><br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Consultar las citas en una fecha determinada</a> </td> <br><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Consultar las citas próximas</a> </td> <br><br>
             <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Consultar las citas pasadas</a> </td> <br><br>
-            <a href="jose/buscarCitaporpaciente.jsp">Consultar las citas por paciente</a> </td> <br><br>  
-            <a href="jose/buscarCitapormedico.jsp">Consultar las citas por medico</a> </td> <br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Consultar las citas por paciente</a> </td> <br><br>
+            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Consultar las citas por medico</a> </td> <br><br>
+           
+            
 
         <h4>Formularios/Quejas</h4><br>
             <a href="jose/especifico.jsp">Consultar formularios de paciente especifico</a> </td><br><br>   

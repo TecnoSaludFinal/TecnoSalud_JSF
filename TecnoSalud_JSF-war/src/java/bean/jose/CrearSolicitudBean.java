@@ -48,6 +48,7 @@ public class CrearSolicitudBean {
     private String destinatario;
     private String tipo_mensaje;
     private String estado;
+ 
     
     List<Mensajes> listaMensajes;
 
