@@ -123,23 +123,30 @@
                 <div id="topoffers-content">
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            
+                            <h3>Borrar Médico</h3>
+                            <img src="../estilo/images/borra.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá borrar el médico seleccionado.<br/><br/>
+                                <a href="BorrarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Commercial Properties" />
+                            <img src="../estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
                                 seleccionado.<br/><br/>
                                 <a href="ConsultarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Deluxe Properties" />
+                            <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                            
+                            <h3>Modificar Médico</h3>
+                            <img src="../estilo/images/modifica.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la modificación de los datos personales del médico 
+                                seleccionado.<br/><br/>
+                                <a href="ModificarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -156,7 +163,7 @@
                         <div class="property">
                             <div class="property_left">
                         
-                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarMedicoServlet" method="post">
+                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarMedico" method="post">
                                <%-- Datos del medico a buscar --%>
 
                                      <label> Introduzca el identificador del médico que desee modificar:</label> 

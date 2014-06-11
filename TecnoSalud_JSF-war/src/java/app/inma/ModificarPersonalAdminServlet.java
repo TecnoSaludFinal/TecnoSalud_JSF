@@ -6,12 +6,13 @@
 
 package app.inma;
 
-import app.entity.Especialidad;
-import app.entity.Roles;
 import app.dao.EspecialidadFacadeLocal;
 import app.dao.PersonalAdministrativoFacadeLocal;
 import app.dao.RolesFacadeLocal;
 import app.entity.Administrador;
+import app.entity.Especialidad;
+import app.entity.PersonalAdministrativo;
+import app.entity.Roles;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -72,16 +73,23 @@ public class ModificarPersonalAdminServlet extends HttpServlet {
         }
         
         
+        String id_p;    
         List <Roles> rol;
-
-        rol = (List <Roles>) facadeRoles.findAll();       
+         
+        rol = (List <Roles>) facadeRoles.findAll();         
+     // Recojo del campo ID_PERSONAL_ADMIN del jsp, el valor introducido   
+        id_p = (String) request.getParameter("id_padmin");
+     // Con este campo, hago su busqueda      
+        PersonalAdministrativo pa = (PersonalAdministrativo) facadePersonalAdmin.findById(Integer.parseInt(id_p));
+         
         request.setAttribute("lista_rol", rol);
+        request.setAttribute("m", pa);
    
-        
-        rd= this.getServletContext().getRequestDispatcher("/inma/NuevoPersonalAdmin.jsp");
-        rd.forward (request, response);
-        
-        
+     // Conexion entre servido y JSP   
+      
+        rd= this.getServletContext().getRequestDispatcher("/inma/ModificarPersonalAdminMuestra.jsp");
+        rd.forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

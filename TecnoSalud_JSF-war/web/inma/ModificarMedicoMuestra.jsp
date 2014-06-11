@@ -14,7 +14,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="sk" />
         <title>Modificar Medico</title>
+        <script	type="text/javascript">	</script>
+        <link rel="stylesheet" href="estilo/style.css">
     </head>
     <body>
          <%
@@ -24,7 +28,7 @@
               <div id="kontainer">
             <!-- header -->
             <div id="header">
-                    <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="logo"><a href=""><img  src="estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
                     <div id="trees"></div>
             </div>
             
@@ -117,32 +121,39 @@
             <div class="ic"></div>  
          <!-- topoffers -->
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="../estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
-                    <div id="topoffers-content-box">
+                   <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            
+                            <h3>Borrar Médico</h3>
+                            <img src="estilo/images/borra.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá borrar el médico seleccionado.<br/><br/>
+                                <a href="BorrarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Commercial Properties" />
+                            <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
                                 seleccionado.<br/><br/>
                                 <a href="ConsultarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
-                            <img src="../estilo/images/temp_estate.jpg" alt="Deluxe Properties" />
+                            <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                            
+                            <h3>Modificar Médico</h3>
+                            <img src="estilo/images/modifica.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la modificación de los datos personales del médico 
+                                seleccionado.<br/><br/>
+                                <a href="ModificarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </div>
-                <div id="topoffers-right-arrow"><a href=""><img src="../estilo/images/arrow_right.jpg" alt="more" /></a></div>
+                <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
             </div>
             <div class="clear"></div>
             
@@ -171,7 +182,7 @@
                     %>
      
           <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ModificarMedicoM" method="post">
-                <fieldset> 
+                 
                         <legend align= "left">
                                 Datos del medico a consultar
                        </legend>
@@ -224,6 +235,11 @@
                         %>
             
                 </select> 
+                        <br>
+                        <br>
+                         <%-- Botón Modificar --%>
+                         <input type="submit" name="btnModificar" value="Modificar">
+          </form>
                             </div>
                             <div class="clear"></div>
                         </div>    

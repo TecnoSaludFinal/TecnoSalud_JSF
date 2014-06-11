@@ -102,7 +102,7 @@ public class ModificarMedicoServletMuestra extends HttpServlet {
         facadeMedico.edit(medico);
         
       
-        rd= this.getServletContext().getRequestDispatcher("/inma/MedicoCreado.html");
+        rd= this.getServletContext().getRequestDispatcher("/inma/Modificado.jsp");
         rd.forward (request, response);
         
         

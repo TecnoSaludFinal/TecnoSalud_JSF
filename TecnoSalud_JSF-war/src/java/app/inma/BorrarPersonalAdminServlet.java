@@ -82,14 +82,14 @@ public class BorrarPersonalAdminServlet extends HttpServlet {
     //    session.setAttribute("pass", password);
                
      // Eliminamos ese personal
-        facadePersonalAdmin.remove(padmin);
+     //   facadePersonalAdmin.remove(padmin);
         
-        List<PersonalAdministrativo> lista = (List<PersonalAdministrativo>) facadePersonalAdmin.findAll();
-        for(int i=0;i<lista.size();i++)
-        {
-            PersonalAdministrativo Modpc = lista.get(i); 
-            facadePersonalAdmin.actualizar(Modpc, i);
-        }
+     //   List<PersonalAdministrativo> lista = (List<PersonalAdministrativo>) facadePersonalAdmin.findAll();
+     //   for(int i=0;i<lista.size();i++)
+     //   {
+      //      PersonalAdministrativo Modpc = lista.get(i); 
+     //       facadePersonalAdmin.actualizar(Modpc, i);
+    //    }
      
      // Conexion entre servido y JSP   
         

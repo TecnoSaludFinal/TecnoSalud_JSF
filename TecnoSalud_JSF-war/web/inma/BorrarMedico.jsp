@@ -16,7 +16,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
-        <title>Borrar Medico</title>
+        <title>Eliminar Medico</title>
         <script	type="text/javascript">	</script>
         <link rel="stylesheet" href="../estilo/style.css">
     </head>
@@ -126,7 +126,10 @@
                 <div id="topoffers-content">
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            
+                            <h3>Borrar Médico</h3>
+                            <img src="../estilo/images/borra.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá borrar el médico seleccionado.<br/><br/>
+                                <a href="BorrarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
@@ -139,10 +142,14 @@
                             <h3>Crear Médico</h3>
                             <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                            
+                            <h3>Modificar Médico</h3>
+                            <img src="../estilo/images/modifica.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la modificación de los datos personales del médico 
+                                seleccionado.<br/><br/>
+                                <a href="ModificarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div class="clear"></div>
                     </div>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ConsultarPersonalAdmin
-    Created on : 13-may-2014, 12:53:29
+    Document   : Borrado
+    Created on : 11-jun-2014, 11:18:06
     Author     : Inma
 --%>
 
@@ -12,19 +12,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
-        <title>Consultar Personal Administrativo</title>
+        <title>Usuario borrado</title>
          <script	type="text/javascript">	</script>
-        <link rel="stylesheet" href="../estilo/style.css">
+        <link rel="stylesheet" href="estilo/style.css">
     </head>
     <body>
          <%
             Administrador a = (Administrador) session.getAttribute("entidad");
         %>
-     
-          <div id="kontainer">
+        
+         <div id="kontainer">
             <!-- header -->
             <div id="header">
-                    <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="logo"><a href=""><img  src="estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
                     <div id="trees"></div>
             </div>
             
@@ -118,67 +118,50 @@
             
             <!-- topoffers -->
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="../estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            <h3>Borrar P. Administrativo</h3>
-                            <img src="../estilo/images/borra.jpg" alt="Commercial Properties" />
-                            <p>A través de este enlace podrá eliminar el usuario elegido.<br/><br/>
-                                <a href="BorrarPersonalAdmin.jsp">Ir ...</a></p>
-                        </div>
-                        <div id="estate2-box">
-                            <h3>Consultar P. Administrativo</h3>
-                            <img src="../estilo/images/consultar.jpg" alt="Commercial Properties" />
-                            <p>A través de este enlace podrá realizar la consulta de los datos personales del personla 
-                                seleccionado.<br/><br/>
+                            <h3>Consultar Personal Administrativo</h3>
+                            <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la consulta de los datos personales del personal
+                                administrativo del hospital.<br/><br/>
                                 <a href="inma/ConsultarPersonalAdmin.jsp">Ir ...</a></p>
                         </div>
+                        <div id="estate2-box">
+                            <h3>Consultar Médico</h3>
+                            <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
+                                seleccionado.<br/><br/>
+                                <a href="inma/ConsultarMedico.jsp">Ir ...</a></p>
+                        </div>
                         <div id="estate3-box">
-                            <h3>Crear P. Administrativo</h3>
-                            <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
-                            <p>Pinchando en este enlace podrá crear un personal nuevo<br/><br/><br/><br/>
-                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
+                            <h3>Crear Médico</h3>
+                            <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
+                            <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                            <h3>Modificar P. Administrativo</h3>
-                            <img src="../estilo/images/modifica.jpg" alt="Deluxe Properties" />
-                            <p>Pinchando en este enlace podrá modificar los datos del usuario<br/><br/><br/><br/>
-                                <a href="ModificarPersonalAdmin.jsp">Ir ...</a></p>
+                             <h3>Crear P. Administrativo</h3>
+                            <img src="estilo/images/crear_nuevo.jpg" alt="Commercial Properties" />
+                            <p>Aenlace podrá dar de alta a personal administrativo nuevo del hospital.<br/><br/>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
+                            
                         </div>
                         <div class="clear"></div>
                     </div>
                 </div>
-                <div id="topoffers-right-arrow"><a href=""><img src="../estilo/images/arrow_right.jpg" alt="more" /></a></div>
+                <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
             </div>
             <div class="clear"></div>   
         
      
             <!-- body -->
-            <div id="lavy-stlpec-box">
+           <div id="lavy-stlpec-box">
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
-                        <h2>Buscar Personal Administrativo</h2>
-                        <div class="property">
-                            <div class="property_left">
-                        
-                                 <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/ConsultarPersonalAdmin" method="post">
-                                            <%-- Datos del medico a buscar --%>
-                                              <fieldset>   
-                                                  <label> Introduzca el identificador del personal administrativo que desee consultar:</label> 
-                                                  <br><br>
-                                                  <input type="text" name="id_personal_admin" value="">
-                                                  <br><br>
+                        <h2>El usuario ha sido borrado con éxito</h2>
 
-                                              </fieldset>
-                                              <br>
-                                              <br>
-
-                                          <%-- Botón buscar --%>
-                                          <input type="submit" name="btnBuscar" value="Buscar">   
-
-                                         <%-- Una vez le damos al botón buscar, nos vamos a CONSULTARPERSONALADMINMUESTRA --%>
-                                  </form>
                             </div>
                             <div class="clear"></div>
                         </div>    
@@ -274,5 +257,3 @@
 	</div> <!-- end footer -->
     </body>
 </html>
-        
-        

@@ -6,17 +6,12 @@
 
 package app.inma;
 
-import app.entity.Especialidad;
-import app.entity.Medicos;
-import app.entity.PersonalAdministrativo;
-import app.entity.Roles;
-import app.dao.EspecialidadFacadeLocal;
-import app.dao.MedicosFacadeLocal;
 import app.dao.PersonalAdministrativoFacadeLocal;
-import app.dao.RolesFacadeLocal;
 import app.entity.Administrador;
+import app.entity.PersonalAdministrativo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,14 +25,12 @@ import javax.servlet.http.HttpSession;
  *
  * @author Inma
  */
-
-public class ModificarPersonalAdminServletMuestra extends HttpServlet {
-
+@WebServlet(name = "BorraDefinitivoServlet", urlPatterns = {"/BorraDefinitivoServlet"})
+public class BorraDefinitivoServlet extends HttpServlet {
     
-    @EJB
-    private PersonalAdministrativoFacadeLocal facadePersonalAdmin;   
-    @EJB
-    private RolesFacadeLocal facadeRoles;
+     @EJB
+    private PersonalAdministrativoFacadeLocal facadePersonalAdmin;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -51,7 +44,7 @@ public class ModificarPersonalAdminServletMuestra extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        RequestDispatcher rd;
+         RequestDispatcher rd;
         //HttpSession
         HttpSession session;
         session = request.getSession(false);
@@ -71,37 +64,29 @@ public class ModificarPersonalAdminServletMuestra extends HttpServlet {
             
             session.setAttribute("entidad", a);
             session.setAttribute("id", idRol);
-        }
+        }       
         
+        String padmin;           
         
-        
-         String dni_m = (String)request.getParameter("dni");
-         String nombre = (String)request.getParameter("nombre");
-         String apellidos = (String)request.getParameter("apellidos");
-         String id_rol = (String)request.getParameter("rol");
-         String contrasena = (String)request.getParameter("contrasena");   
-         Integer id_pAdmin = Integer.parseInt(request.getParameter("id_padmin"));
-         
-          
-         PersonalAdministrativo padmin = new PersonalAdministrativo();
-         padmin.setIdPersonalAdmin(id_pAdmin);
-         padmin.setDni(dni_m);
-         padmin.setNombre(nombre);
-         padmin.setApellidos(apellidos);
-         padmin.setContrasena(contrasena);
+        padmin = (String) request.getParameter("id_personal_admin");
                
-                 
-         Roles r;       
-         r = (Roles) facadeRoles.findById(Integer.parseInt(id_rol));
+        PersonalAdministrativo userp = (PersonalAdministrativo) facadePersonalAdmin.findById(Integer.parseInt(padmin));
         
-         padmin.setIdRol(r);
-                 
+     // Eliminamos ese personal
+        facadePersonalAdmin.remove(userp);
         
-        facadePersonalAdmin.edit(padmin);
+        List<PersonalAdministrativo> lista = (List<PersonalAdministrativo>) facadePersonalAdmin.findAll();
+        for(int i=0;i<lista.size();i++)
+        {
+            PersonalAdministrativo Modpc = lista.get(i); 
+            facadePersonalAdmin.actualizar(Modpc, i);
+        }
+     
+     // Conexion entre servido y JSP   
         
-       
-        rd= this.getServletContext().getRequestDispatcher("/inma/Modificado.jsp");
-        rd.forward (request, response);
+        rd= this.getServletContext().getRequestDispatcher("/inma/Borrado.jsp");
+        rd.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

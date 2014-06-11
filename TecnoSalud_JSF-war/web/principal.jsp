@@ -204,26 +204,26 @@
                             <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del personal
                                 administrativo del hospital.<br/><br/>
-                                <a href="ConsultarPersonalAdmin.jsp">Ir ...</a></p>
+                                <a href="inma/ConsultarPersonalAdmin.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
                             <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
                                 seleccionado.<br/><br/>
-                                <a href="ConsultarMedico.jsp">Ir ...</a></p>
+                                <a href="inma/ConsultarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
                             <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="inma/NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                             <h3>Crear Personal Administrativo</h3>
+                             <h3>Crear P. Administrativo</h3>
                             <img src="estilo/images/crear_nuevo.jpg" alt="Commercial Properties" />
                             <p>Aenlace podrá dar de alta a personal administrativo nuevo del hospital.<br/><br/>
-                                <a href="NuevoPersonalAdmin.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
                             
                         </div>
                         <div class="clear"></div>

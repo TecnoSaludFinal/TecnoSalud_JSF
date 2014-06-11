@@ -74,7 +74,7 @@ public class ModificarMedicoServlet extends HttpServlet {
         }
         
         
-        Integer id_medicos;
+        String id_m;
         List <Especialidad> especialidad;        
         List <Roles> rol;
          
@@ -82,9 +82,9 @@ public class ModificarMedicoServlet extends HttpServlet {
         rol = (List <Roles>) facadeRoles.findAll();       
           
      // Recojo del campo ID_MEDICOS del jsp, el valor introducido   
-        id_medicos = Integer.parseInt(request.getParameter("id_medico"));
+        id_m = (String)request.getParameter("id_medicos");
      // Con este campo, hago su busqueda      
-        Medicos medico = (Medicos) facadeMedico.findById(id_medicos);
+        Medicos medico = (Medicos) facadeMedico.findById(Integer.parseInt(id_m));
         
      // Una vez que hemos encontrado el medico, mandamos el campo MEDICO a traves de M al JSP
         request.setAttribute("lista_especialidad", especialidad);
