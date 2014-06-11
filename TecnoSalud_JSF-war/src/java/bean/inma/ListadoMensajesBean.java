@@ -15,6 +15,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -32,6 +33,10 @@ public class ListadoMensajesBean
     // "Insert Code > Add Business Method")
     public List<Mensajes> getListaMen() 
     {
+         FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        listaMen = (List<Mensajes>) menFacadelocal.findAll();
+        
+        
         return listaMen;
     }
 

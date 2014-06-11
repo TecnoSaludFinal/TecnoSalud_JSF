@@ -223,7 +223,7 @@
                              <h3>Crear P. Administrativo</h3>
                             <img src="estilo/images/crear_nuevo.jpg" alt="Commercial Properties" />
                             <p>Aenlace podrá dar de alta a personal administrativo nuevo del hospital.<br/><br/>
-                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
+                                <a href="inma/NuevoPersonalAdmin.jsp">Ir ...</a></p>
                             
                         </div>
                         <div class="clear"></div>

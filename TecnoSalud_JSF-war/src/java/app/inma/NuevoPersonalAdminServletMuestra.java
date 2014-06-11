@@ -80,7 +80,7 @@ public class NuevoPersonalAdminServletMuestra extends HttpServlet {
          String nombre = (String)request.getParameter("nombre");
          String apellidos = (String)request.getParameter("apellidos");
          String email = (String)request.getParameter("email");
-         String id_rol = (String)request.getParameter("rol");
+         String id_rol = "3";
          String contrasena = (String)request.getParameter("contrasena");                
          
          PersonalAdministrativo padmin = new PersonalAdministrativo();
@@ -95,13 +95,14 @@ public class NuevoPersonalAdminServletMuestra extends HttpServlet {
          
          r = (Roles) facadeRoles.findById(Integer.parseInt(id_rol));
         
+         
          padmin.setIdRol(r);
                  
         
         facadePersonalAdmin.create(padmin);
         
        
-        rd= this.getServletContext().getRequestDispatcher("/inma/PersonalCreado.html");
+        rd= this.getServletContext().getRequestDispatcher("/inma/PersonalCreado.jsp");
         rd.forward (request, response);
         
     }

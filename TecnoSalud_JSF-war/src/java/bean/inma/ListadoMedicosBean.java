@@ -16,6 +16,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -35,7 +36,11 @@ public class ListadoMedicosBean
     
    
 
-    public List<Medicos> getListaMedicos() {
+    public List<Medicos> getListaMedicos() 
+    {
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        listaMedicos = (List<Medicos>) medicosFacadelocal.findAll();
+        
         return listaMedicos;
     }
     public void setListaMedicos(List<Medicos> listaMedicos) 

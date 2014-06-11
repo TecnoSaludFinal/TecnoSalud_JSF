@@ -1,23 +1,30 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<%-- 
+    Document   : PersonalCreado
+    Created on : 11-jun-2014, 14:54:23
+    Author     : Inma
+--%>
+
+<%@page import="app.entity.Administrador"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
-        <title>Listado Personal Administrativo</title>
-         <script	type="text/javascript"></script>
-        <link rel="stylesheet" href="../estilo/style.css" type="text/css"/>
-    </h:head>
-    <h:body>
-           
-
-        <div id="kontainer">
+        <title>Usuario Creado</title>
+         <script	type="text/javascript">	</script>
+        <link rel="stylesheet" href="estilo/style.css">
+    </head>
+    <body>
+         <%
+            Administrador a = (Administrador) session.getAttribute("entidad");
+        %>
+        
+         <div id="kontainer">
             <!-- header -->
             <div id="header">
-                    <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="logo"><a href=""><img  src="estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
                     <div id="trees"></div>
             </div>
             
@@ -25,7 +32,7 @@
             <div id="navcontainer">
                     <ul class="navlist"> 
                             <li>
-                                <a href="principal.jsp"> 
+                                <a href="principal.jsp"> <%--id="current"--%>
                                     INICIO
                                 </a>
                             </li>
@@ -58,7 +65,6 @@
                                     </li>
                                 </ul>
                             <li><a href="ListadoMensajes.xhtml">MENSAJES</a>
-                            </li>
                             </li>
                             <li>
                                 FORMULARIOS
@@ -101,108 +107,79 @@
                     </ul>
             </div>
             <div class="search">
-
-                     <div class="searchwrapper">
-                        <h:outputText class="searchbox" value="#{sessionScope['entidad'].getNombre()} #{sessionScope['entidad'].getApellidos()} -- #{sessionScope['entidad'].getIdRol().getTipoRol()}">
-                        </h:outputText>
-                    </div>
+                <div id="searchwrapper">
+                    <output type="text" class="searchbox" name="s">
+                        <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %>
+                    </output>
+                </div>
             </div>
-            <div class="clear"/>
+            <div class="clear"></div>
             <div class="ic"></div>
-        
-             <!-- topoffers -->
+            
+            <!-- topoffers -->
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="../estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
-                    <div id="topoffers-content-box">
-                        
+
+
+
+            <div id="topoffers-content-box">
+                        <div id="estate1-box">
+                            <h3>Borrar P. Administrativo</h3>
+                            <img src="estilo/images/borra.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá eliminar el usuario elegido.<br/><br/>
+                                <a href="BorrarPersonalAdmin.jsp">Ir ...</a></p>
+                        </div>
                         <div id="estate2-box">
-                            <h3>Consultar Médico</h3>
-                            <img src="../estilo/images/consultar.jpg" alt="Commercial Properties" />
-                            <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
+                            <h3>Consultar P. Administrativo</h3>
+                            <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la consulta de los datos personales del personla 
                                 seleccionado.<br/><br/>
-                                <a href="inma/ConsultarMedico.jsp">Ir ...</a></p>
+                                <a href="inma/ConsultarPersonalAdmin.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
-                            <h3>Crear Médico</h3>
-                            <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
-                            <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="inma/NuevoMedico.jsp">Ir ...</a></p>
+                            <h3>Crear P. Administrativo</h3>
+                            <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
+                            <p>Pinchando en este enlace podrá crear un personal nuevo<br/><br/><br/><br/>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
                         </div>
-                        
+                        <div id="estate4-box">
+                            <h3>Modificar P. Administrativo</h3>
+                            <img src="estilo/images/modifica.jpg" alt="Deluxe Properties" />
+                            <p>Pinchando en este enlace podrá modificar los datos del usuario<br/><br/><br/><br/>
+                                <a href="ModificarPersonalAdmin.jsp">Ir ...</a></p>
+                        </div>
                         <div class="clear"></div>
                     </div>
-                </div>
+
+                    </div>
                 <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
             </div>
-            <div class="clear"></div>     
-                
+            <div class="clear"></div>   
         
-             <!-- body -->
-            <div id="lavy-stlpec-box">
+     
+            <!-- body -->
+           <div id="lavy-stlpec-box">
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
-                        <h2>Listado del personal administrativo</h2>
-                        <div class="property">
-                            <div class="property_left">
-        
-                            <h:form>
-                                <h:dataTable value="#{listadoPersonalAdminBean.listaPAdmin}" var="lis">
-                                <h:column>
-                                    <f:facet name="header">
-                                       ID Personal Administrativo
-                                    </f:facet>
-                                    #{lis.idPersonalAdmin}
-                                </h:column>
-                                <h:column>
-                                     <f:facet name="header">
-                                       Nombre
-                                    </f:facet>
-                                    #{lis.nombre}
-                                </h:column>
-                                <h:column>
-                                     <f:facet name="header">
-                                       Apellidos
-                                    </f:facet>
-                                    #{lis.apellidos}
-                                </h:column>
-                                 <h:column>
-                                     <f:facet name="header">
-                                       DNI
-                                    </f:facet>
-                                    #{lis.dni}
-                                </h:column> 
-                                <h:column>
-                                     <f:facet name="header">
-                                       EMAIL
-                                    </f:facet>
-                                    #{lis.email}
-                                </h:column>    
-                                <h:column>
-                                     <f:facet name="header">
-                                       ROL
-                                    </f:facet>
-                                    #{lis.idRol.tipoRol}
-                                </h:column> 
-                                 
+                        <h2>El usuario ha sido creado con éxito</h2>
 
-                            </h:dataTable>
-                            </h:form>
-                                
-                 </div>
-                        <div class="clear"></div>
-                        </div> 
+                            </div>
+                            <div class="clear"></div>
+                        </div>    
+                               
                     </div>
                 </div>
             </div>
-            
-            <div id="pravy-stlpec-box">
+
+        <br><br> 
+         <div id="pravy-stlpec-box">
                 <div id="pravy-stlpec">
                     <div id="find_property">
                         <form id="form_163050" class="appnitro"  method="post" action="#">
-                            <h2>Buscar por...</h2>
+                            <h2>Buscar citas por...</h2>
                             <div>
-                                    <label class="description" for="element_1">Country </label>
+                                    <label class="description" for="element_1">Día </label>
                             </div>
                             <div>
                                     <select class="element select medium" id="element_1" name="element_1">
@@ -274,11 +251,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+	</div>
         <div class="clear"></div>
-         <!-- footer -->
+        <!-- footer -->
 		<div id="footer">
 		<p><strong>Admin Principal</strong> theme by TecnoSalud </p>
 	</div> <!-- end footer -->
-    </h:body>
+    </body>
 </html>

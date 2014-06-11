@@ -15,6 +15,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -30,7 +31,11 @@ public class ListadoPersonalAdminBean
     
     // Add business logic below. (Right-click in editor and choose
     // "Insert Cod e > Add Business Method")
-    public List<PersonalAdministrativo> getListaPAdmin() {
+    public List<PersonalAdministrativo> getListaPAdmin() 
+    {
+         FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        listaPAdmin = (List<PersonalAdministrativo>) pAdminFacadelocal.findAll();
+        
         return listaPAdmin;
     }
 

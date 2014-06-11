@@ -37,7 +37,7 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
     private EspecialidadFacadeLocal facadeEspecialidad;
     @EJB
     private RolesFacadeLocal facadeRoles;
-    
+       
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -83,7 +83,8 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
          String nombre = (String)request.getParameter("nombre");
          String apellidos = (String)request.getParameter("apellidos");
          String id_especialidad = (String)request.getParameter("especialidad");
-         String id_rol = (String)request.getParameter("rol");
+         String id_rol = "2";
+         
          String contrasena = (String)request.getParameter("contrasena");                
          
          Medicos medico = new Medicos();
@@ -92,22 +93,26 @@ public class NuevoMedicoServletMuestra extends HttpServlet {
          medico.setApellidos(apellidos);
          medico.setContrasena(contrasena);
   //       medico.setIdMedicos(id_medico);  
-        
          
+        List <Medicos> num_m;       
+        num_m = (List<Medicos>) facadeMedico.findAll();
+        
+        Integer id_m= num_m.size()+1;
          Especialidad esp;
-         Roles r;
+        Roles r;
          
          esp = (Especialidad) facadeEspecialidad.findById(Integer.parseInt(id_especialidad));
          r = (Roles) facadeRoles.findById(Integer.parseInt(id_rol));
          
          medico.setIdEspecialidad(esp);
+         medico.setIdMedicos(id_m);
          medico.setIdRol(r);
                  
         
         facadeMedico.create(medico);
         
         
-        rd= this.getServletContext().getRequestDispatcher("/inma/PanelAdminMedicos.jsp");
+        rd= this.getServletContext().getRequestDispatcher("/inma/PersonalCreado.jsp");
         rd.forward (request, response);
         
     }

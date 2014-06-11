@@ -130,25 +130,32 @@
             <div id="topoffers">
                 <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
-                    <div id="topoffers-content-box">
+                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            
+                            <h3>Borrar Médico</h3>
+                            <img src="estilo/images/borra.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá borrar el médico seleccionado.<br/><br/>
+                                <a href="BorrarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
                             <img src="estilo/images/consultar.jpg" alt="Commercial Properties" />
                             <p>A través de este enlace podrá realizar la consulta de los datos personales del médico 
                                 seleccionado.<br/><br/>
-                                <a href="inma/ConsultarMedico.jsp">Ir ...</a></p>
+                                <a href="ConsultarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
                             <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
                             <p>Pinchando en este enlace podrá crear un médico nuevo<br/><br/><br/><br/>
-                                <a href="inma/NuevoMedico.jsp">Ir ...</a></p>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico">Ir ...</a></p>
                         </div>
                         <div id="estate4-box">
-                            
+                            <h3>Modificar Médico</h3>
+                            <img src="estilo/images/modifica.jpg" alt="Commercial Properties" />
+                            <p>A través de este enlace podrá realizar la modificación de los datos personales del médico 
+                                seleccionado.<br/><br/>
+                                <a href="ModificarMedico.jsp">Ir ...</a></p>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -169,9 +176,9 @@
                             List<Especialidad> lista_espe = (List <Especialidad>)request.getAttribute("lista_especialidad");
                         %>
 
-                        <%
+                        <%--
                             List<Roles> lista_rol = (List <Roles>)request.getAttribute("lista_rol");
-                        %>
+                        --%>
 											
 	 
                         <form method="post" action="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedicoM" name="datos" onblur="nif(this.value)">
@@ -210,28 +217,6 @@
                                         %>
 
                                 </select>
-
-                                <br><br>
-
-                                <label for="rol">Rol</label>
-                                <select name ="rol" id="rol">
-                                        <%
-                                        //Recorremos la lista
-                                        for(int i=0;i<lista_rol.size();i++)
-                                        {                                  
-                                            %>
-                                            <option value="<%= lista_rol.get(i).getIdRol() %>">
-                                                <%= lista_rol.get(i).getTipoRol()  %>
-                                            </option>
-                                        <%    
-                                        }
-                                        %>
-
-                                </select>
-
-                                <br><br>
-
-                                    
                             <br><br>
 
                         <%-- Boton Crear Medico Nuevo --%>    

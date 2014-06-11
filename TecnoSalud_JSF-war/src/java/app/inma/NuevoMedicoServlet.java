@@ -32,15 +32,9 @@ import javax.servlet.http.HttpSession;
 
 public class NuevoMedicoServlet extends HttpServlet {
 
-    
-    
-    //Aqui declaramos la variable del facade local
-    @EJB
-    private MedicosFacadeLocal facadeMedico;
     @EJB
     private EspecialidadFacadeLocal facadeEspecialidad; 
-    @EJB
-    private RolesFacadeLocal facadeRoles;
+   
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -78,14 +72,13 @@ public class NuevoMedicoServlet extends HttpServlet {
         }
         
        
-        List <Especialidad> especialidad;
-        
-        List <Roles> rol;
+        List <Especialidad> especialidad;        
+     //   List <Roles> rol;
          
         especialidad = (List <Especialidad>)facadeEspecialidad.findAll();
-        rol = (List <Roles>) facadeRoles.findAll();
+      //  rol = (List <Roles>) facadeRoles.findAll();
         request.setAttribute("lista_especialidad", especialidad);
-        request.setAttribute("lista_rol", rol);
+      //  request.setAttribute("lista_rol", rol);
    
         
         rd= this.getServletContext().getRequestDispatcher("/inma/NuevoMedico.jsp");
