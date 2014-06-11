@@ -166,10 +166,10 @@
                             Medicos medico = (Medicos) request.getAttribute("m");
                         %>
                         
-                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorraDefinitivoServletM" method="post"> 
+                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorraMedico" method="post"> 
                         
                        <legend align= "left">
-                                Datos del medico a consultar
+                                Datos del medico a borrar
                        </legend>
                        <br>
                        Identificador del médico:
@@ -184,6 +184,11 @@
                        Especialidad:           
                        <input  name="Especialidad" value=" <%= medico.getIdEspecialidad().getNombre() %> ">        
                        <br><br> 
+                       
+                       
+                        <%-- Boton  --%>               
+                       <input type="submit" value="Borrar" name="Borrar">              
+                       <br> 
                        
                         </form>
                             </div>
