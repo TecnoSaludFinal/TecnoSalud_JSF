@@ -23,6 +23,9 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 #logo {margin:25px 0 0 20px;float:left;}
 #trees {background:url("images/trees.jpg") no-repeat;width:139px;height:76px;float:right;margin-top:53px;margin-right:10px}
 /* menu */
+
+
+
 #navcontainer {text-align:left;height:40px;float:left;width:800px}
 .navlist 
 {
@@ -31,12 +34,12 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
     margin: 0 auto;
     padding: 0;
     color:#fff;
-    font-size: 4em;
+    font-size:1 em;
     letter-spacing:2px;
     font-weight:bold;
    
 }
-#navlist ul {margin:0;padding:0 0 0 7%;}
+//#navlist ul {margin:0;padding:0 0 0 7%;}
 .navlist br
 {
     display: none;
@@ -65,6 +68,7 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 }
 .navlist ul
 {
+    border-radius: 0 0 5px 5px;
     left: 0;
     margin: 0;
     position: absolute;
@@ -91,6 +95,8 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
     margin: 0;
 }
 
+
+
 #navlist li a:hover {color:#fff;background:#42361b}
 #navlist #current {color:#fff;text-decoration:none;background:#42361b;text-align:left}
 .ul
@@ -108,6 +114,7 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 {
     display: block;
 }
+
 
 /* search form */
 #search {float:right;height:40px;width:200px;border:1px solid red}
@@ -142,4 +149,130 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 .property_left {float:left}
 .property_left img {float:left;margin-right:15px}
 .property_right {float:right}
+
+
+
+
+
+  /* el menú en si mismo */
+  .mi-menu  {
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 0 auto; /* si queremos centrarlo */
+    padding: 0;
+    letter-spacing:2px;
+    /* la altura y su ancho dependerán de los textos */
+    height:100px; 
+    width: 900px;
+    color:#fff;
+    /* el color de fondo */
+   
+    
+  }
+  
+  
+
+  /* si es necesario, evitamos que Blogger de problemas con los saltos de línea cuando escribimos el HTML */
+  .mi-menu  br { display:none; }
+
+  /* cada item del menu */
+  .mi-menu  li {
+    display: block;
+    float: left; /* la lista se ve horizontal */
+    height: 40px;
+    width: 160px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style-type:none;
+  }
+  
+  .navlist li a 
+{
+    padding:1em 12px;
+    color:#d7cca2;
+    text-decoration:none;
+    float:left;
+    display: block;
+    font-size: 10px;
+    margin: 6px;
+}
+  
+  .mi-menu li a {
+    border-left: 1px solid #000;
+    border-right: 1px solid #666;
+    color: #EEE;
+    display: block;
+    font-family: Tahoma;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 0 14px;
+    margin: 6px 0;
+    text-decoration: none;
+    /* animamos el cambio de color de los textos */
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+  }
+  /* eliminamos los bordes del primer y el último */
+  .mi-menu li:first-child a { border-left: none; }
+  .mi-menu li:last-child a{ border-right: none; }
+  /* efecto hover cambia el color */
+  .mi-menu li:hover > a { color: Crimson; }
+
+  /* los submenús */
+  .mi-menu ul {
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    margin: 0;
+    
+    opacity: 0; /* no son visibles */
+    position: absolute;
+    top: 40px; /* se ubican debajo del enlace principal */
+    /* el color de fondo */
+    background: #42361b;
+    
+    /* animamos su visibildiad */
+    -moz-transition: opacity .25s ease .1s;
+    -webkit-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+  }
+  /* son visibes al poner el cursor encima */
+  .mi-menu li:hover > ul { opacity: 1; }
+
+   /* cada un ode los items de los submenús */
+  .mi-menu ul li {
+    height: 0; /* no son visibles */
+    overflow: hidden;
+    padding: 0;
+    /* animamos su visibildiad */
+    -moz-transition: height .25s ease .1s;
+    -webkit-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+  }
+  .mi-menu li:hover > ul li {
+    height: 100%; /* los mostramos */
+    overflow: visible;
+    padding: 0;
+    width: 100px;
+  }
+  .mi-menu ul li a {
+    border: none;
+    border-bottom: 1px solid #111;
+    margin: 0;
+    /* el ancho dependerá de los textos a utilizar */
+    padding: 5px 20px;
+    width: 100%;
+  }
+  /* el último n otiene un borde */
+  .mi-menu ul li:last-child a { border: none; }
+
 
