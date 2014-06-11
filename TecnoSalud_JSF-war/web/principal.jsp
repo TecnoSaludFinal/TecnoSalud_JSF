@@ -329,35 +329,7 @@
 		<div id="footer">
 		<p><strong>Admin Principal</strong> theme by TecnoSalud </p>
 	</div> <!-- end footer -->
-    </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Consultar todas las citas a fecha de hoy</a> </td> <br><br>
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Consultar las citas en una fecha determinada</a> </td> <br><br>
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Consultar las citas próximas</a> </td> <br><br>
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Consultar las citas pasadas</a> </td> <br><br>
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Consultar las citas por paciente</a> </td> <br><br>
-            <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Consultar las citas por medico</a> </td> <br><br>
-           
-            
-=======
-
-
->>>>>>> e3760d3f266b8387c0769d479d7c19752132d6b3
-
-
+         
         <%
             }
         %>
