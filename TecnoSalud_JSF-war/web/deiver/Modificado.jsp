@@ -1,15 +1,14 @@
 <%-- 
-    Document   : AnadirCita
-    Created on : 05-may-2014, 11:04:09
+    Document   : Modificado
+    Created on : 05-may-2014, 11:03:34
     Author     : Deiver
 --%>
 
-<%@page import="java.util.Calendar"%>
-<%@page import="app.entity.Hora"%>
 <%@page import="app.entity.Pacientes"%>
-<%@page import="app.entity.TipoCita"%>
-<%@page import="app.entity.Especialidad"%>
+<%@page import="app.entity.PeticionCita"%>
+<%@page import="java.util.Calendar"%>
 <%@page import="java.util.List"%>
+<%@page import="app.entity.Citas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,44 +16,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
-        <title>Solicitar cita</title>
-        <script	type="text/javascript">
-            function validar(ev)
-            {
-                var FiltroRx2 = /^\d{4}\-\d{1,2}\-\d{1,2}$/;
-                var ok= true;
-                var msg = null;
-                
-                if(document.form.fecha.value === "")
-                { //¿Tiene 0 caracteres?
-                    // formulario.nombre.focus(); // Damos el foco al control
-                    msg = "Debes escribir algo en el campo : Fecha\n"; //Mostramos el mensaje
-                    ok = false;
-                }
-                else if (!FiltroRx2.test(document.form.fecha.value))
-                {
-                    msg = "El formato de la fecha no es correcto";
-                    ok = false;
-                }
-                
-                
-                if (ok===false)
-                {
-                    alert(msg);
-                    return ok;
-                }
-                //Si ha llegado hasta aquí, es que todo es correcto
-            }
-        </script>
+        <title>Modificado</title>
+        <script	type="text/javascript"></script>
         <link rel="stylesheet" href="estilo/style.css">
     </head>
     <body>
-        <%
-            List<TipoCita> lista_tc = (List<TipoCita>) request.getAttribute("lista_tc");
-            List<Hora> lista_hora = (List<Hora>) request.getAttribute("lista_hora");
-            
-            Pacientes p = (Pacientes) session.getAttribute("entidad");
-        %>
         
         <div id="kontainer">
             <!-- header -->
@@ -78,7 +44,7 @@
             <div class="search">
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
-                        <%= p.getNombre() +" "+ p.getApellidos() +" -- "+ p.getIdRol().getTipoRol() %>
+                        Error!
                     </output>
                 </div>
             </div>
@@ -114,53 +80,15 @@
                 <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
             </div>
             <div class="clear"></div>
+            
             <!-- body -->
             <div id="lavy-stlpec-box">
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
-                        <h2>Anadir petición cita</h2>
+                        <h2>Modificado!</h2>
                         <div class="property">
                             <div class="property_left">
-                                <form name="form" onsubmit="return validar(this)" method="POST" action="http://localhost:8080/TecnoSalud_JSF-war/peticion">
-
-                                    Tipo de solicitud: <select name="cita">
-                                    <%
-                                        for(int i=0;i<lista_tc.size();i++)
-                                        {
-                                    %>
-
-                                    <option value="<%= lista_tc.get(i).getNombre() %>"><%= lista_tc.get(i).getNombre() %></option>
-
-                                    <%
-                                        }
-                                    %>
-
-                                    </select> <br/>
-                                    Fecha (AAAA-MM-DD): <input type="text" name="fecha"><br/>
-                                    
-                                    Hora: <select name="hora">
-                                    <%
-                                        for(int i=0;i<lista_hora.size();i++)
-                                        {
-                                            Calendar hor = Calendar.getInstance();
-                                            hor.setTime(lista_hora.get(i).getHora());
-                                            Integer hr = hor.get(Calendar.HOUR);
-                                            Integer mi = hor.get(Calendar.MINUTE);
-                                            Integer se = hor.get(Calendar.SECOND);
-                                    %>
-
-                                    <option value="<%= lista_hora.get(i).getIdHora() %>"><%= hr+":"+mi+":"+se %></option>
-
-                                    <%
-                                        }
-                                    %>
-
-                                    </select> <br/>
-                                    Comentario: <br/>
-                                    <textarea rows="4" cols="50" type="text" name="comentario"></textarea><br/><br/>
-                                    <br/><br/>
-                                    <input type="submit" value="Enviar" name="Enviar">
-                                </form>
+                                ¡Se ha realizado la operación satisfactoriamente!
                             </div>
                             <div class="clear"></div>
                         </div>    

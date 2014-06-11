@@ -17,7 +17,7 @@
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
         <title>Listado citas</title>
-        <script	type="text/javascript">	</script>
+        <script	type="text/javascript"></script>
         <link rel="stylesheet" href="estilo/style.css">
     </head>
     <body>
@@ -276,13 +276,12 @@
                     </div>
                 </div>
             </div>
-            
         </div>
         <div class="clear"></div>
         <!-- footer -->
-		<div id="footer">
-			<p>M&aacute;s <a href="http://www.mejoresplantillasgratis.es" title="MPG - plantillas web y plantillas Flash" target="_blank">Plantillas Web Gratis</a> en MPG.</p>
-			<p><a href="http://www.x-reality.sk">xreality</a></p>
-		</div>
+        <div id="footer">
+                <p>M&aacute;s <a href="http://www.mejoresplantillasgratis.es" title="MPG - plantillas web y plantillas Flash" target="_blank">Plantillas Web Gratis</a> en MPG.</p>
+                <p><a href="http://www.x-reality.sk">xreality</a></p>
+        </div>
     </body>
 </html>
