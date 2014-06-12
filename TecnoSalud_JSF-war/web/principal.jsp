@@ -633,9 +633,10 @@
                             <a href="#">Listados</a>
                                 <ul>
                                 <li><a href="face/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
-                                <li><a href="face/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
+                                <li><a href="face/inma/ListadoPA.jsf">Listado de Personal Administrativo del hospital</a></li>
                                 </ul>
-                            </li>                            
+                            </li>    
+                             
                     </ul>
             </div>
             <div class="search">
@@ -650,41 +651,38 @@
             
             <!-- topoffers -->
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div>
+             <!--   <div id="topoffers-left-arrow"><a href=""><img src="estilo/images/arrow_left.jpg" alt="more" /></a></div> -->
                 <div id="topoffers-content">
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            <h3>Consultar Personal Administrativo</h3>
-                            <a href="inma/ConsultarPersonalAdmin.jsp"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
+                            <h3>Consultar P Administrativo</h3>
+                            <a href="inma/ConsultarPersonalAdmin.jsp"><img src="estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
                             <p>Pinchando en este enlace podrás consultar los datos personales del personal
                                 administrativo del hospital.<br/><br/>
                              
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar Médico</h3>
-                             <a href="inma/ConsultarMedico.jsp"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
+                             <a href="inma/ConsultarMedico.jsp"><img src="estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
                             <p>Pinchando en este enlace podrás consultar los datos personales de medico.<br/><br/>
                              
                         </div>
                         <div id="estate3-box">
                             <h3>Crear Médico</h3>
-                           <a href="inma/NuevoMedico.jsp"> <img src="estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" /></a>
+                           <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico"> <img src="estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
                             <p>Pinchando en este enlace podrás dar de alta a un médico nuevo<br/><br/><br/><br/>
                                
                         </div>
                         <div id="estate4-box">
                              <h3>Crear Personal Administrativo</h3>
-                             <a href="inma/NuevoPersonalAdmin.jsp"><img src="estilo/images/crear_nuevo.jpg" alt="Commercial Properties" /></a>
+                             <a href="inma/NuevoPersonalAdmin.jsp"><img src="estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
                             <p>Pinchando en este enlace podrás dar de alta a un nuevo personal administrativo del hospital.<br/><br/>
-                               
-                  
                         </div>
-                                
-                                
+          
                         <div class="clear"></div>
                     </div>
                 </div>
-                <div id="topoffers-right-arrow"><a href><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
+             <!--   <div id="topoffers-right-arrow"><a href><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div> -->
             </div>
             <div class="clear"></div>   
         

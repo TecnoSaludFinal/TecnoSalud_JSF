@@ -21,7 +21,7 @@
             Administrador a = (Administrador) session.getAttribute("entidad");
         %>
      
-          <div id="kontainer">
+         <div id="kontainer">
             <!-- header -->
             <div id="header">
                     <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
@@ -30,80 +30,43 @@
             
             <!-- navigation -->
             <div id="navcontainer">
-                    <ul class="navlist"> 
+                   
+                    <ul class="mi-menu">
+                        <li><a href="principal.jsp"> Inicio </a></li>
+                     
+                             <li>
+                            <a href="#"> Citas </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Buscar para hoy</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar próximas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar pasadas</a> </li>
+                            <li> <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Buscar por paciente</a> </li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Buscar por médico</a> </li>
+                        
+                            </ul>
+                     </li>
+                     <li><a href="ListadoMensajes.xhtml">Mensajes</a>
+                            
                             <li>
-                                <a href="principal.jsp"> <%--id="current"--%>
-                                    INICIO
-                                </a>
-                            </li>
+                        <a href="#"> Formularios </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=all">Consultar todos los formularios recibidos</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=quejas">Consultar los formularios de quejas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=sug">Consultar los formularios de sugerencias</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=feli">Consultar los formularios de felicitaciones</a></li>                               
+                        
+                            </ul>
+                      </li>
                             <li>
-                                CITAS
+                            <a href="#">Listados</a>
                                 <ul>
-                                    <li><a href="http://localhost:8080/TecnoSalud_JSFl-war/ConsultarListadoCitas?do=all">
-                                    Consultar citas de hoy
-                                    </a>
-                                    </li>                                
-                                    <li><a href="jose/buscarCitaporfecha.jsp">
-                                    Consultar citas de una fecha determinada
-                                    </a>
-                                    </li>
-                                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">
-                                    Consultar citas pasadas
-                                    </a>
-                                    </li>
-                                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">
-                                    Consultar citas próxima
-                                    </a>
-                                    </li>
-                                    <li><a href="jose/buscarCitaporpaciente.jsp">
-                                    Consultar citas por paciente
-                                    </a>
-                                    </li>
-                                    <li><a href="jose/buscarCitapormedico.jsp">
-                                    Consultar citas por médico
-                                    </a>
-                                    </li>
+                                <li><a href="face/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
+                                <li><a href="face/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
                                 </ul>
-                            <li><a href="ListadoMensajes.xhtml">MENSAJES</a>
-                            </li>
-                            <li>
-                                FORMULARIOS
-                                <ul>
-                                <li><a href="jose/especifico.jsp">
-                                    Consultar formularios de paciente especifico
-                                    </a>
-                                </li>
-                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=all">
-                                    Consultar todos los formularios recibidos
-                                    </a>
-                                </li>
-                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=quejas">
-                                    Consultar los formularios de quejas
-                                    </a>
-                                </li>
-                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=sug">
-                                    Consultar los formularios de sugerencias
-                                    </a>
-                                </li>
-                                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=feli">
-                                    Consultar los formularios de felicitaciones
-                                    </a>
-                                </li>                               
-                                </ul>
-                            </li>
-                            <li>
-                                LISTADOS
-                                <ul>
-                                <li><a href="face/inma/ListadoMedicos.xhtml">
-                                    Listado de Medicos del hospital
-                                    </a>
-                                </li>
-                                <li><a href="face/inma/ListadoPA.xhtml">
-                                    Listado de Personal Administrativo del hospital
-                                    </a>
-                                </li>
-                                </ul>
-                            </li>                            
+                            </li>    
+                             
                     </ul>
             </div>
             <div class="search">
@@ -123,28 +86,27 @@
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
                             <h3>Borrar P. Administrativo</h3>
-                            <img src="../estilo/images/borra.jpg" alt="Commercial Properties" />
-                            <p>A través de este enlace podrá eliminar el usuario elegido.<br/><br/>
-                                <a href="BorrarPersonalAdmin.jsp">Ir ...</a></p>
+                            <a href="BorrarPersonalAdmin.jsp"><img src="../estilo/images/borra.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrá borrar el personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate2-box">
                             <h3>Consultar P. Administrativo</h3>
-                            <img src="../estilo/images/consultar.jpg" alt="Commercial Properties" />
-                            <p>A través de este enlace podrá realizar la consulta de los datos personales del personla 
-                                seleccionado.<br/><br/>
-                                <a href="inma/ConsultarPersonalAdmin.jsp">Ir ...</a></p>
+                            <a href="inma/ConsultarPersonalAdmin.jsp"><img src="../estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrás consultar los datos personales del personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate3-box">
                             <h3>Crear P. Administrativo</h3>
-                            <img src="../estilo/images/crear_nuevo.jpg" alt="Deluxe Properties" />
-                            <p>Pinchando en este enlace podrá crear un personal nuevo<br/><br/><br/><br/>
-                                <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin">Ir ...</a></p>
+                            <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin"><img src="../estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrás dar de alta a un personal administrativo nuevo.</p><br/><br/>
+                               
                         </div>
                         <div id="estate4-box">
                             <h3>Modificar P. Administrativo</h3>
-                            <img src="../estilo/images/modifica.jpg" alt="Deluxe Properties" />
-                            <p>Pinchando en este enlace podrá modificar los datos del usuario<br/><br/><br/><br/>
-                                <a href="ModificarPersonalAdmin.jsp">Ir ...</a></p>
+                            <a href="inma/ModificarMedico.jsp"><img src="../estilo/images/modifica.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrá modificar los datos del usuario.</p><br/><br/>
+                               
                         </div>
                         <div class="clear"></div>
                     </div>

@@ -166,7 +166,7 @@
                             Medicos medico = (Medicos) request.getAttribute("m");
                         %>
                         
-                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorraMedico" method="post"> 
+                        <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorraDefinitivoServletM" method="post"> 
                         
                        <legend align= "left">
                                 Datos del medico a borrar

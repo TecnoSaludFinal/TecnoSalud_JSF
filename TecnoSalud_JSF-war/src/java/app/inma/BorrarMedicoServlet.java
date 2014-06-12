@@ -74,21 +74,18 @@ public class BorrarMedicoServlet extends HttpServlet {
         
         
         String id_medicos;
-        String id_especialidad;
+    //   String id_especialidad;
           
      // Recojo del campo ID_MEDICOS del jsp, el valor introducido   
         id_medicos = (String) request.getParameter("id_medicos");
      // Con este campo, hago su busqueda      
         Medicos medico = facadeMedico.findById(Integer.parseInt(id_medicos));
       
+         request.setAttribute("m", medico);
         
-        
-        
-        
-    
-               // Conexion entre servido y JSP   
-                rd= this.getServletContext().getRequestDispatcher("/inma/BorrarMedicoMuestra.jsp");
-                rd.forward(request, response);
+     // Conexion entre servido y JSP   
+        rd= this.getServletContext().getRequestDispatcher("/inma/BorrarMedicoMuestra.jsp");
+        rd.forward(request, response);
            
             
            

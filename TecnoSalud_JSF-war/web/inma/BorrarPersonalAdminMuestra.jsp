@@ -170,7 +170,7 @@
                     
                       <form name="edit" action="http://localhost:8080/TecnoSalud_JSF-war/BorraDefinitivoServlet" method="post">    
                         <legend align= "left">
-                                Datos del personal a consultar
+                                Datos del personal a borrar
                        </legend>
                        <br>
                        Identificador del personal:
