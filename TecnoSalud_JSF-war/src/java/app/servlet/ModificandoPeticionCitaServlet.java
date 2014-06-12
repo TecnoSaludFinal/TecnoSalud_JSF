@@ -84,7 +84,7 @@ public class ModificandoPeticionCitaServlet extends HttpServlet
         
         pcfl.edit(pc);
         
-        rd = getServletContext().getRequestDispatcher("/deiver/Modificado.html");
+        rd = getServletContext().getRequestDispatcher("/deiver/Modificado.jsp");
         rd.forward(request, response);
     }
 

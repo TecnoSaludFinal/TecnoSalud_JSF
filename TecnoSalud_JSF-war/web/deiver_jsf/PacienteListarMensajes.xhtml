@@ -23,20 +23,39 @@
             
             <!-- navigation -->
             <div id="navcontainer">
-                <ul id="navlist">
-                    <li id="active"><a href="#" id="current">INICIO</a></li>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">BUYING</a></li>
-                    <li><a href="#">SELLING</a></li>
-                    <li><a href="#">INSURANCE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul class="mi-menu">
+                    <li><a href="../../principal.jsp"> Inicio </a></li>
+                    <li>
+                        <a href="#">Perfil</a>
+                        <ul>
+                            <li> <a href="faces/deiver_jsf/pacientePersonal.xhtml">Datos personales</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Médico</a></li>
+                    <li>
+                        <a href="#"> Consulta de Citas </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar por próximas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar por pasadas</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"> Formularios/Quejas </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listar?do=cons">Nuevo formulario)</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=personal&perfil=<%=p.getNuhsa()%>">Historial formulario personales</a> </li>   
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
             <div class="search">
                 <div class="searchwrapper">
                     <h:outputText class="searchbox" value="#{sessionScope['entidad'].getNombre()} #{sessionScope['entidad'].getApellidos()} -- #{sessionScope['entidad'].getIdRol().getTipoRol()}">
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </h:outputText>
                 </div>
             </div>

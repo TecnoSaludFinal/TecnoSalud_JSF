@@ -8,34 +8,60 @@ by: Amit Jakhu
 www.amitjakhu.com
 --------------------->
 
-<!--META-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login Form</title>
+        <!--META-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Login Form</title>
 
-<!--STYLESHEETS-->
-<link href="estilo/css/style.css" rel="stylesheet" type="text/css" />
+        <!--STYLESHEETS-->
+        <link href="estilo/css/style.css" rel="stylesheet" type="text/css" />
 
-<!--SCRIPTS-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<!--Slider-in icons-->
-<script type="text/javascript">
-    $(document).ready(function() {
-            $(".username").focus(function() {
-                    $(".user-icon").css("left","-48px");
-            });
-            $(".username").blur(function() {
-                    $(".user-icon").css("left","0px");
-            });
+        <!--SCRIPTS-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+        <!--Slider-in icons-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                    $(".username").focus(function() {
+                            $(".user-icon").css("left","-48px");
+                    });
+                    $(".username").blur(function() {
+                            $(".user-icon").css("left","0px");
+                    });
 
-            $(".password").focus(function() {
-                    $(".pass-icon").css("left","-48px");
+                    $(".password").focus(function() {
+                            $(".pass-icon").css("left","-48px");
+                    });
+                    $(".password").blur(function() {
+                            $(".pass-icon").css("left","0px");
+                    });
             });
-            $(".password").blur(function() {
-                    $(".pass-icon").css("left","0px");
-            });
-    });
-</script>
+        </script>
 
+        <script type="text/javascript">
+            function validar(ev)
+                {
+                    var ok= true;
+                    var msg = null;
+
+                    if(document.form.dni.value === "")
+                    { //¿Tiene 0 caracteres?
+                        // formulario.nombre.focus(); // Damos el foco al control
+                        msg = "No puedes dejar el campo del DNI vacío\n"; //Mostramos el mensaje
+                        ok = false;
+                    }
+                    else if (document.form.pass.value === "")
+                    {
+                        msg = "No puedes dejar el campo de la contraseña vacío\n";
+                        ok = false;
+                    }
+
+                    if (ok===false)
+                    {
+                        alert(msg);
+                        return ok;
+                    }
+                    //Si ha llegado hasta aquí, es que todo es correcto
+                }
+        </script>
 </head>
 <body>
 
@@ -48,7 +74,7 @@ www.amitjakhu.com
     <!--END SLIDE-IN ICONS-->
 
 <!--LOGIN FORM-->
-<form name="login-form" class="login-form" action="http://localhost:8080/TecnoSalud_JSF-war/inicioServlet" method="POST">
+<form onsubmit="return validar(this)" name="form" class="login-form" action="http://localhost:8080/TecnoSalud_JSF-war/inicioServlet" method="POST">
 
 	<!--HEADER-->
     <div class="header">

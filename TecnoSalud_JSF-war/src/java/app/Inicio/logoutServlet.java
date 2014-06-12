@@ -39,7 +39,6 @@ public class logoutServlet extends HttpServlet {
         
         HttpSession session;
         session = request.getSession();
-        session.removeAttribute("entidad");
         
         session.invalidate();
         

@@ -46,18 +46,41 @@
             
             <!-- navigation -->
             <div id="navcontainer">
-                    <ul id="navlist">
-                            <li id="active"><a href="#" id="current">INICIO</a></li>
-                            <li><a href="#">CITAS</a></li>
-                            <li><a href="#">MENSAJES</a></li>
-                            <li><a href="#">FORMULARIOS</a></li>
-                            <li><a href="#">LISTADOS</a></li>
-                    </ul>
+                    <ul class="mi-menu">
+                    <li><a href="principal.jsp"> Inicio </a></li>
+                    <li>
+                        <a href="#">Perfil</a>
+                        <ul>
+                            <li><a href =" #">Datos personales</a></li>
+                            <li><a href =" #">Crear solicitud cambios de datos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Médico</a></li>
+                    <li>
+                        <a href="#"> Consulta de Citas </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar próximas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar pasadas</a> </li>
+                            <li> <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Buscar por paciente</a> </li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Buscar por médico</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pacientes</a>
+                        <ul>
+                            <li><a href =" arkadiusz/bienvenido.jsp">Menu de Pacientes</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="search">
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
                         <%= pa.getNombre() +" "+ pa.getApellidos() +" -- "+ pa.getIdRol().getTipoRol() %>
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </output>
                 </div>
             </div>

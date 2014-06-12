@@ -129,7 +129,7 @@ public class InicioServlet extends HttpServlet
             }
             else
             {
-                rd = getServletContext().getRequestDispatcher("/error.jsp");//No existe
+                rd = getServletContext().getRequestDispatcher("/error_login.jsp");//No existe
                 rd.forward(request, response);
             }
         }

@@ -40,30 +40,31 @@
     <div id="navcontainer">
                    
         <ul class="mi-menu">
-          <li><a href="principal.jsp"> Inicio </a></li>
-          <li>
-            <a href="#">Perfil</a>
-           <ul>
-          <li> <a href="faces/deiver_jsf/pacientePersonal.xhtml">Datos personales</a></li>
-          
-           </ul>
-          </li>
-          <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Médico</a></li>
-          <li>
-            <a href="#"> Consulta de Citas </a>
-            <ul>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar por próximas</a></li>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar por pasadas</a> </li>
-           </ul>
-          </li>
-          <li>
-            <a href="#"> Formularios/Quejas </a>
-            <ul>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listar?do=cons">Nuevo formulario)</a></li>
-                <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=personal&perfil=<%=p.getNuhsa()%>">Historial formulario personales</a> </li>   
+            <li><a href="principal.jsp"> Inicio </a></li>
+            <li>
+                <a href="#">Perfil</a>
+                <ul>
+                    <li> <a href="deiver_jsf/pacientePersonal.xhtml">Datos personales</a></li>
+                </ul>
+            </li>
+            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Médico</a></li>
+            <li>
+                <a href="#"> Consulta de Citas </a>
+                <ul>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar por próximas</a></li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar por pasadas</a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"> Formularios/Quejas </a>
+                <ul>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listar?do=cons">Nuevo formulario)</a></li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=personal&perfil=<%=p.getNuhsa()%>">Historial formulario personales</a> </li>   
+                </ul>
+            </li>
         </ul>
         </div>
 
@@ -71,6 +72,7 @@
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
                         <%= p.getNombre() +" "+ p.getApellidos() +" -- "+ p.getIdRol().getTipoRol() %>
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </output>
                 </div>
             </div>
@@ -251,6 +253,7 @@
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
                         <%= m.getNombre() +" "+ m.getApellidos() +" -- "+ m.getIdRol().getTipoRol() %>
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </output>
                 </div>
             </div>
@@ -437,6 +440,7 @@
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
                         <%= pa.getNombre() +" "+ pa.getApellidos() +" -- "+ pa.getIdRol().getTipoRol() %>
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </output>
                 </div>
             </div>
@@ -643,6 +647,7 @@
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
                         <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %>
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
                     </output>
                 </div>
             </div>
