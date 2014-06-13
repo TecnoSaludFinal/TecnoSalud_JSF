@@ -21,6 +21,7 @@ import app.entity.PeticionCita;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.Locale;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -81,10 +82,10 @@ public class InicioServlet extends HttpServlet
         {
             session = request.getSession();
             
-            dni = (String) request.getParameter("dni");
-            password = (String) request.getParameter("pass");
+            dni = (String) request.getParameter("dni").toUpperCase(Locale.ENGLISH);
+            password = (String) request.getParameter("pass").toUpperCase(Locale.ENGLISH);
             
-            p = pfl.findByDni(dni,password);
+            p = pfl.findByDni(dni.toUpperCase(),password.toUpperCase());
             m = mfl.findByDni(dni,password);
             pa = pafl.findByDni(dni,password);
             a = afl.findByDni(dni, password);
@@ -129,6 +130,9 @@ public class InicioServlet extends HttpServlet
             }
             else
             {
+                session.removeAttribute("entidad");
+                session.removeAttribute("id");
+                session.invalidate();
                 rd = getServletContext().getRequestDispatcher("/error_login.jsp");//No existe
                 rd.forward(request, response);
             }
