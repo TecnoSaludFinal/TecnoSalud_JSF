@@ -66,7 +66,7 @@
                                     </a>
                                     </li>
                                 </ul>
-                            <li><a href="ListadoMensajes.xhtml">MENSAJES</a>
+                            <li><a href="faces/inma/ListadoMensajes.xhtml">MENSAJES</a>
                             </li>
                             <li>
                                 FORMULARIOS
@@ -96,11 +96,11 @@
                             <li>
                                 LISTADOS
                                 <ul>
-                                <li><a href="face/inma/ListadoMedicos.xhtml">
+                                <li><a href="faces/inma/ListadoMedicos.xhtml">
                                     Listado de Medicos del hospital
                                     </a>
                                 </li>
-                                <li><a href="face/inma/ListadoPA.xhtml">
+                                <li><a href="faces/inma/ListadoPA.xhtml">
                                     Listado de Personal Administrativo del hospital
                                     </a>
                                 </li>

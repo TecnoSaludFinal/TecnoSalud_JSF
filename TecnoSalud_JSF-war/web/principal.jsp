@@ -471,8 +471,8 @@
                             <p> Pinchando en este enlace podrás consultar sus datos personales.<br/><br/>
                         </div>
                                  <div id="estate4-box">
-                            <h3> FALTA </h3>
-                            <a href="#"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
+                             <h3> Consultar historial paciente </h3>
+                            <a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
                             <p> Pinchando en este enlace podrás consultar el historial personal de un paciente.<br/><br/>
                         </div>
                                                 <div class="clear"></div>
@@ -621,7 +621,7 @@
                         
                             </ul>
                      </li>
-                     <li><a href="ListadoMensajes.xhtml">Mensajes</a>
+                     <li><a href="faces/inma/ListadoMensajes.xhtml">Mensajes</a>
                             
                             <li>
                         <a href="#"> Formularios </a>
@@ -636,8 +636,8 @@
                             <li>
                             <a href="#">Listados</a>
                                 <ul>
-                                <li><a href="face/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
-                                <li><a href="face/inma/ListadoPA.jsf">Listado de Personal Administrativo del hospital</a></li>
+                                <li><a href="faces/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
+                                <li><a href="faces/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
                                 </ul>
                             </li>    
                              

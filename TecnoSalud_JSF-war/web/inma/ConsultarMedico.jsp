@@ -48,7 +48,7 @@
                         
                             </ul>
                      </li>
-                     <li><a href="ListadoMensajes.xhtml">Mensajes</a>
+                     <li><a href="faces/inma/ListadoMensajes.xhtml">Mensajes</a>
                             
                             <li>
                         <a href="#"> Formularios </a>
@@ -63,8 +63,8 @@
                             <li>
                             <a href="#">Listados</a>
                                 <ul>
-                                <li><a href="face/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
-                                <li><a href="face/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
+                                <li><a href="faces/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
+                                <li><a href="faces/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
                                 </ul>
                             </li>    
                              
