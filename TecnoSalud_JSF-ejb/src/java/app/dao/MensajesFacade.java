@@ -49,6 +49,44 @@ public class MensajesFacade extends AbstractFacade<Mensajes> implements Mensajes
         return lista;
     }
     
+    public List<Mensajes> findNotReaded(String owner)
+    {
+        List<Mensajes> mensa;
+        Query q;
+        String p = "P";
+        try
+        {
+            q = em.createQuery("SELECT mensa FROM Mensajes mensa WHERE mensa.estado = :p AND mensa.destinatario = :owner")
+                    .setParameter("owner", owner)
+                    .setParameter("p", p);
+            mensa = q.getResultList();
+        }
+        catch(NoResultException e)
+        {
+            return null;
+        }
+        return mensa;   
+    }
+
+    public List<Mensajes> findReaded(String owner)
+    {
+        List<Mensajes> mensa;
+        Query q;
+        String s = "S";
+        try
+        {
+            q = em.createQuery("SELECT mensa FROM Mensajes mensa WHERE mensa.estado = :s AND mensa.destinatario = :owner")
+                    .setParameter("owner", owner)
+                    .setParameter("s", s);
+            mensa = q.getResultList();
+        }
+        catch(NoResultException e)
+        {
+            return null;
+        }
+        return mensa;   
+    }
+
     
     
 }

@@ -32,5 +32,9 @@ public interface MensajesFacadeLocal {
     int count();
     
     List <Mensajes> findAllByRemi(String r);
+        
+    List<Mensajes> findReaded(String owner);
+    
+    List<Mensajes> findNotReaded(String owner);
     
 }
