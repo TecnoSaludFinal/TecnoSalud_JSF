@@ -9,7 +9,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
+      	<meta http-equiv="Content-Language" content="sk" />
         <title>Personal Administrativo</title>
         <link rel="stylesheet" href="/TecnoSalud_JSF-war/estilo/style.css">
     </head>
@@ -49,7 +51,7 @@
                         <a href="#"> Formularios/Quejas </a>
                         <ul>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listar?do=cons">Nuevo formulario)</a></li>
-                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=personal&perfil=<%=p.getNuhsa()%>">Historial formulario personales</a> </li>   
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=personal&perfil=<%=personal.getNuhsa()%>">Historial formulario personales</a> </li>   
                         </ul>
                     </li>
                 </ul>
@@ -57,7 +59,7 @@
             <div class="search">
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
-                        <%= p.getNombre() +" "+ p.getApellidos() +" -- "+ p.getIdRol().getTipoRol() %>
+                        <%= personal.getNombre() +" "+ personal.getApellidos() +" -- "+ personal.getIdRol().getTipoRol() %>
                         <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout">Salir</a>
                     </output>
                 </div>
