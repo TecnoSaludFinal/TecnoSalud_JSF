@@ -430,8 +430,13 @@
            <li>
             <a href="#">Pacientes</a>
            <ul>
-            <li><a href =" arkadiusz/bienvenido.jsp">Menu de Pacientes</a></li>
-           </ul>
+             <li><a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente</a></li>
+             <li><a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp">Consultar Paciente</a></li>
+             <li><a href ="/TecnoSalud_JSF-war/ListadoPacientes">Listar pacientes</a></li>
+             <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/crearMensaje.xhtml">Crear Mensaje</a></li>
+             <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioNoLeidos.xhtml">Mensajes Recibidos</a></li>
+             <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioLeidos.xhtml">Mensajes Antiguos</a></li>
+            </ul>
           </li>
         </ul>
         </div>
