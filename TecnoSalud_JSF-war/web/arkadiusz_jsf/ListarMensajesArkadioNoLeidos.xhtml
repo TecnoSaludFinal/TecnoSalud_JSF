@@ -2,22 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1252" />
-	      <meta http-equiv="Content-Language" content="es" />
-        <title>Listado de mensajes</title>
-        <script	type="text/javascript"></script>
-        <link rel="stylesheet" href="/TecnoSalud_JSF-war/estilo/style.css" type="text/css"/>
+        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="sk" />
+        <title>Listado Personal Administrativo</title>
+         <script	type="text/javascript"></script>
+        <link rel="stylesheet" href="../estilo/style.css" type="text/css"/>
     </h:head>
     <h:body>
-        
+           
+
        <div id="kontainer">
             <!-- header -->
             <div id="header">
-                    <div id="logo"><a href=""><img  src="/TecnoSalud_JSF-war/estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
                     <div id="trees"></div>
             </div>
             
@@ -73,34 +73,33 @@
             <div class="ic"></div>
             
             <!-- topoffers -->
-            
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="/TecnoSalud_JSF-war/estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-left-arrow"><a href=""><img src="../estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
-                     <div id="topoffers-content-box">
+                    <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            <h3>Borrar Médico</h3>
-                            <a href="BorrarMedico.jsp"><img src="/TecnoSalud_JSF-war/estilo/images/borra.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
-                            <p>Pinchando en este enlace podrá borrar el médico seleccionado.</p><br/><br/>
-                            
+                            <h3>Borrar P. Administrativo</h3>
+                            <a href="BorrarPersonalAdmin.jsp"><img src="../estilo/images/borra.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrá borrar el personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate2-box">
-                            <h3>Consultar Médico</h3>
-                            <a href="ConsultarMedico.jsp"><img src="../estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
-                            <p>Pinchando en este enlace podrás consultar los datos personales de medico.</p><br/><br/>
-                                
+                            <h3>Consultar P. Administrativo</h3>
+                            <a href="inma/ConsultarPersonalAdmin.jsp"><img src="../estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrás consultar los datos personales del personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate3-box">
-                            <h3>Crear Médico</h3>
-                            <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoMedico"><img src="../estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
-                            <p>Pinchando en este enlace podrás dar de alta a un médico nuevo.</p><br/><br/>
-                              
+                            <h3>Crear P. Administrativo</h3>
+                            <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin"><img src="../estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrás dar de alta a un personal administrativo nuevo.</p><br/><br/>
+                               
                         </div>
                         <div id="estate4-box">
-                            <h3>Modificar Médico</h3>
-                            <a href="ModificarMedico.jsp"><img src="../estilo/images/modifica.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
-                            <p>Pinchando en este enlace podrá realizar la modificación de los datos personales del médico.</p><br/><br/>
-                                
+                            <h3>Modificar P. Administrativo</h3>
+                            <a href="inma/ModificarMedico.jsp"><img src="../estilo/images/modifica.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrá modificar los datos del usuario.</p><br/><br/>
+                               
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -114,7 +113,7 @@
             <div id="lavy-stlpec-box">
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
-                        <h2>Listado de mensajes</h2>
+                        <h2>Listado del personal administrativo</h2>
                         <div class="property">
                             <div class="property_left">
                             <h:form>
@@ -125,15 +124,18 @@
                               <f:ajax render="text"/>
                               </h:selectOneMenu>
                               <br/><br/><br/>
-                          <h:outputText id="text" value="#{mensajesLeidos.mess.contenido}"></h:outputText>    
-                          </h:form>
-                        </div>
+                              <h:outputText id="text" value="#{mensajesLeidos.mess.contenido}"></h:outputText>    
+                            </h:form>
+
+                                
+                 </div>
                         <div class="clear"></div>
                         </div> 
                     </div>
                 </div>
             </div>
-        <div id="pravy-stlpec-box">
+            
+            <div id="pravy-stlpec-box">
                 <div id="pravy-stlpec">
                     <div id="find_property">
                         <form id="form_163050" class="appnitro"  method="post" action="#">
@@ -219,4 +221,3 @@
 	</div> <!-- end footer -->
     </h:body>
 </html>
-

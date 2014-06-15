@@ -5,64 +5,67 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1252" />
-	      <meta http-equiv="Content-Language" content="es" />     
-        <title>Creacion de mensajes</title>
-        <script	type="text/javascript"></script>
-        <link rel="stylesheet" href="/TecnoSalud_JSF-war/estilo/style.css" type="text/css"/>
+        <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
+	<meta http-equiv="Content-Language" content="sk" />
+        <title>Listado Personal Administrativo</title>
+         <script	type="text/javascript"></script>
+        <link rel="stylesheet" href="../estilo/style.css" type="text/css"/>
     </h:head>
     <h:body>
-      
-             <div id="kontainer">
+           
+
+       <div id="kontainer">
             <!-- header -->
             <div id="header">
-                    <div id="logo"><a href=""><img  src="/TecnoSalud_JSF-war/estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="logo"><a href=""><img  src="../estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
                     <div id="trees"></div>
             </div>
             
             <!-- navigation -->
             <div id="navcontainer">
-                <ul class="mi-menu">
-                    <li><a href="principal.jsp"> Inicio </a></li>
-                    <li>
-                        <a href="#">Perfil</a>
-                        <ul>
-                            <li><a href =" #">Datos personales</a></li>
-                            <li><a href =" #">Crear solicitud cambios de datos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Médico</a></li>
-                    <li>
-                        <a href="#"> Consulta de Citas </a>
+                   
+                    <ul class="mi-menu">
+                        <li><a href="principal.jsp"> Inicio </a></li>
+                     
+                             <li>
+                            <a href="#"> Citas </a>
                         <ul>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestión citas</a></li>
-                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Buscar para hoy</a></li>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar próximas</a></li>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar pasadas</a> </li>
                             <li> <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Buscar por paciente</a> </li>
                             <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Buscar por médico</a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Pacientes</a>
-                        <ul>                          
-                           <li><a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente</a></li>
-                           <li><a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp">Consultar Paciente</a></li>
-                           <li><a href ="/TecnoSalud_JSF-war/ListadoPacientes">Listar pacientes</a></li>
-                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/crearMensaje.xhtml">Crear Mensaje</a></li>
-                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioNoLeidos.xhtml">Mensajes Recibidos</a></li>
-                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioLeidos.xhtml">Mensajes Antiguos</a></li>
-                           
-                        </ul>
-                    </li>
-                </ul>
+                        
+                            </ul>
+                     </li>
+                     <li><a href="faces/inma/ListadoMensajes.xhtml">Mensajes</a>
+                            
+                            <li>
+                        <a href="#"> Formularios </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=all">Consultar todos los formularios recibidos</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=quejas">Consultar los formularios de quejas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=sug">Consultar los formularios de sugerencias</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarFormulario?do=feli">Consultar los formularios de felicitaciones</a></li>                               
+                        
+                            </ul>
+                      </li>
+                            <li>
+                            <a href="#">Listados</a>
+                                <ul>
+                                <li><a href="faces/inma/ListadoMedicos.xhtml">Listado de Medicos del hospital</a></li>
+                                <li><a href="faces/inma/ListadoPA.xhtml">Listado de Personal Administrativo del hospital</a></li>
+                                </ul>
+                            </li>    
+                             
+                    </ul>
             </div>
             <div class="search">
                 <div id="searchwrapper">
                     <output type="text" class="searchbox" name="s">
-                        <%= pa.getNombre() +" "+ pa.getApellidos() +" -- "+ pa.getIdRol().getTipoRol() %>
-                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
+                        <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %>
                     </output>
                 </div>
             </div>
@@ -71,43 +74,49 @@
             
             <!-- topoffers -->
             <div id="topoffers">
-                <div id="topoffers-left-arrow"><a href=""><img src="/TecnoSalud_JSF-war/estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-left-arrow"><a href=""><img src="../estilo/images/arrow_left.jpg" alt="more" /></a></div>
                 <div id="topoffers-content">
                     <div id="topoffers-content-box">
                         <div id="estate1-box">
-                            
+                            <h3>Borrar P. Administrativo</h3>
+                            <a href="BorrarPersonalAdmin.jsp"><img src="../estilo/images/borra.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrá borrar el personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate2-box">
-                            <h3>Opciones cita</h3>
-                            <img src="/TecnoSalud_JSF-war/estilo/images/temp_estate.jpg" alt="Commercial Properties" />
-                            <p>Pinchando en este enlace podrás realizar peticiones sobre las citas, 
-                                podrás solicitar una cita, modificar y/o eliminar la misma.<br/><br/>
-                                <a href="http://localhost:8080/TecnoSalud_JSF-war/listaEsp">Abrir</a></p>
+                            <h3>Consultar P. Administrativo</h3>
+                            <a href="inma/ConsultarPersonalAdmin.jsp"><img src="../estilo/images/consultar.jpg" width="50px" height="50px" alt="Commercial Properties" /></a>
+                            <p>Pinchando en este enlace podrás consultar los datos personales del personal seleccionado.</p><br/><br/>
+                               
                         </div>
                         <div id="estate3-box">
-                            <h3>Mostrar citas de hoy</h3>
-                            <img src="/TecnoSalud_JSF-war/estilo/images/temp_estate.jpg" alt="Deluxe Properties" />
-                            <p>Si quieres ver las citas que tienes para el día de hoy<br/><br/><br/><br/><a href="ConsultarListadoCitas?do=all">Abrir</a></p>
+                            <h3>Crear P. Administrativo</h3>
+                            <a href="http://localhost:8080/TecnoSalud_JSF-war/NuevoPersonalAdmin"><img src="../estilo/images/crear_nuevo.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrás dar de alta a un personal administrativo nuevo.</p><br/><br/>
+                               
                         </div>
                         <div id="estate4-box">
-                            
+                            <h3>Modificar P. Administrativo</h3>
+                            <a href="inma/ModificarMedico.jsp"><img src="../estilo/images/modifica.jpg" width="50px" height="50px" alt="Deluxe Properties" /></a>
+                            <p>Pinchando en este enlace podrá modificar los datos del usuario.</p><br/><br/>
+                               
                         </div>
                         <div class="clear"></div>
                     </div>
                 </div>
-                <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
+                <div id="topoffers-right-arrow"><a href=""><img src="../estilo/images/arrow_right.jpg" alt="more" /></a></div>
             </div>
-            <div class="clear"></div>
-            
+            <div class="clear"></div>   
+        
+     
             <!-- body -->
             <div id="lavy-stlpec-box">
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
-                      <h:outputLabel value="{loginBeanArkadio.nombre} "/>
-                        <h:outputLabel value="{loginBeanArkadio.apellidos}"/>
-                        <a href="/TecnoSalud_JSF-war/PersonalAdministrativoLogout" >Salida</a>
-                        
-                        <h:form>
+                        <h2>Listado del personal administrativo</h2>
+                        <div class="property">
+                            <div class="property_left">
+                    <h:form>
                             
                             Remitente:
                             <h:outputText id="remitente" value="#{crearMensajeArkadio.remitente}" /><br/><br/>
@@ -118,7 +127,7 @@
                             <h:outputText id="hora" value="#{crearMensajeArkadio.hora}"/><br/><br/>
                             Destinatario:
                             <h:outputText id="destinatario" value="#{crearMensajeArkadio.destinatario}"/><br/><br/>
-                            wiadomosc
+                            Mensaje
                             <h:outputText id="tipo_mensaje" value="#{crearMensajeArkadio.tipo_mensaje}"/><br/><br/>
                             Fecha
                             <h:outputText id="fecha" value="#{crearMensajeArkadio.fecha}">
@@ -153,11 +162,16 @@
                             </h:commandButton>
                             
                         </h:form>
-                  
-                            </form>
+
+
+                                
+                 </div>
+                        <div class="clear"></div>
+                        </div> 
                     </div>
                 </div>
             </div>
+            
             <div id="pravy-stlpec-box">
                 <div id="pravy-stlpec">
                     <div id="find_property">
@@ -238,13 +252,10 @@
             </div>
         </div>
         <div class="clear"></div>
-        <!-- footer -->
-        <div id="footer">
-                <p>M&aacute;s <a href="http://www.mejoresplantillasgratis.es" title="MPG - plantillas web y plantillas Flash" target="_blank">Plantillas Web Gratis</a> en MPG.</p>
-                <p><a href="http://www.x-reality.sk">xreality</a></p>
-        </div>
-        
-        
+         <!-- footer -->
+		<div id="footer">
+		<p><strong>Admin Principal</strong> theme by TecnoSalud </p>
+	</div> <!-- end footer -->
     </h:body>
 </html>
-
+    
