@@ -4,60 +4,232 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <meta http-equiv="Content-Type"	content="text/html" />
+	<meta http-equiv="Content-Language" content="es" />     
+        <title>Creacion de mensajes</title>
+        <link rel="stylesheet" href="/TecnoSalud_JSF-war/estilo/style.css" type="text/css"/>
     </h:head>
     <h:body>
+      
+             <div id="kontainer">
+            <!-- header -->
+            <div id="header">
+                    <div id="logo"><a href=""><img  src="/TecnoSalud_JSF-war/estilo/images/logo_1.jpg" alt="Real Estate" /></a></div>
+                    <div id="trees"></div>
+            </div>
+            
+            <!-- navigation -->
+            <div id="navcontainer">
+                <ul class="mi-menu">
+                    <li><a href="principal.jsp"> Inicio </a></li>
+                    <li>
+                        <a href="#">Perfil</a>
+                        <ul>
+                            <li><a href =" #">Datos personales</a></li>
+                            <li><a href =" #">Crear solicitud cambios de datos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://localhost:8080/TecnoSalud_JSF-war/consultarHistorial">Historial Medico</a></li>
+                    <li>
+                        <a href="#"> Consulta de Citas </a>
+                        <ul>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/listado">Gestion citas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=all">Citas para hoy</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=fec">Buscar por fecha determinada</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pend">Buscar proximas</a></li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=pasa">Buscar pasadas</a> </li>
+                            <li> <a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=paci">Buscar por paciente</a> </li>
+                            <li><a href="http://localhost:8080/TecnoSalud_JSF-war/ConsultarListadoCitas?do=medi">Buscar por medico</a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pacientes</a>
+                        <ul>                          
+                           <li><a href ="/TecnoSalud_JSF-war/arkadiusz/crear_paciente.jsp"> Crear Paciente</a></li>
+                           <li><a href ="/TecnoSalud_JSF-war/arkadiusz/consultar_paciente2.jsp">Consultar Paciente</a></li>
+                           <li><a href ="/TecnoSalud_JSF-war/ListadoPacientes">Listar pacientes</a></li>
+                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/crearMensaje.xhtml">Crear Mensaje</a></li>
+                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioNoLeidos.xhtml">Mensajes Recibidos</a></li>
+                           <li><a href ="/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioLeidos.xhtml">Mensajes Antiguos</a></li>
+                           
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <div id="searchwrapper">
+                    <output type="text" class="searchbox" name="s">
+                        <h:outputLabel value="#{loginBeanArkadio.nombre} "/>
+                        <h:outputLabel value="#{loginBeanArkadio.apellidos}"/>
+                        - Personal Admin
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
+                    </output>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="ic"></div>
+            
+            <!-- topoffers -->
+            <div id="topoffers">
+                <div id="topoffers-left-arrow"><a href=""><img src="/TecnoSalud_JSF-war/estilo/images/arrow_left.jpg" alt="more" /></a></div>
+                <div id="topoffers-content">
+                    <div id="topoffers-content-box">
+                        <div id="estate1-box">
+                            
+                        </div>
+                        <div id="estate2-box">
+                            <h3>Opciones cita</h3>
+                            <img src="/TecnoSalud_JSF-war/estilo/images/temp_estate.jpg" alt="Commercial Properties" />
+                            <p>Pinchando en este enlace podr�s realizar peticiones sobre las citas, 
+                                podr�s solicitar una cita, modificar y/o eliminar la misma.<br/><br/>
+                                <a href="http://localhost:8080/TecnoSalud_JSF-war/listaEsp">Abrir</a></p>
+                        </div>
+                        <div id="estate3-box">
+                            <h3>Mostrar citas de hoy</h3>
+                            <img src="/TecnoSalud_JSF-war/estilo/images/temp_estate.jpg" alt="Deluxe Properties" />
+                            <p>Si quieres ver las citas que tienes para el d�a de hoy<br/><br/><br/><br/><a href="ConsultarListadoCitas?do=all">Abrir</a></p>
+                        </div>
+                        <div id="estate4-box">
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div id="topoffers-right-arrow"><a href=""><img src="estilo/images/arrow_right.jpg" alt="more" /></a></div>
+            </div>
+            <div class="clear"></div>
+            
+            <!-- body -->
+            <div id="lavy-stlpec-box">
+                <div id="lavy-stlpec">
+                    <div id="latest_properties">
+                        <h:form>
+                            
+                            Hora:
+                            <h:outputText id="hora" value="#{crearMensajeArkadio.hora}"/><br/><br/>
+                            Fecha
+                            <h:outputText id="fecha" value="#{crearMensajeArkadio.fecha}">
+                            
+                            <f:convertDateTime pattern="yyyy-MM-dd" />
+                            <h:message for="fecha" style="color:red" />
+                            </h:outputText> <br/><br/>
+                            
+                            <h:selectOneMenu value="#{crearMensajeArkadio.ayuda_ajax}">
+                                <f:selectItem itemValue="0" itemLabel="Elige" />
+                                <f:selectItem itemValue="1" itemLabel="Administrador" />
+                                <f:selectItem itemValue="2" itemLabel="Paciente" />	  
+                                <f:ajax render="namelist"/>
+                                <f:ajax render="messagetype"/>
+                            </h:selectOneMenu>
+                            
+                            <h:selectOneMenu id="namelist" value="#{crearMensajeArkadio.destinatario}">
+                                <f:selectItems value="#{crearMensajeArkadio.lista}" var ="persona" 
+                                               itemLabel="#{persona.apellidos} #{persona.nombre}" itemValue="#{persona.dni}"  />
+                            </h:selectOneMenu>
+                            <h:selectOneRadio id="messagetype" 
+                                             value="#{crearMensajeArkadio.tipo_mensaje}">
+                                <f:selectItem itemDisabled="#{crearMensajeArkadio.disabled}" itemLabel="Mensaje privada" itemValue="WP"/>
+                                <f:selectItem itemLabel="Contestar a peticion de modificar datos" itemValue="PM"/>
+                                
+                            </h:selectOneRadio>
+                            <h:inputTextarea value="#{crearMensajeArkadio.contenido}" cols="40" rows="10" >
+                            </h:inputTextarea><br/>
+                            
+                            <h:commandButton value="Enviar" 
+                                             action="#{crearMensajeArkadio.doMensaje()}" >
+                            </h:commandButton>
+                            
+                        </h:form>
+                  
+                    </div>
+                </div>
+            </div>
+            <div id="pravy-stlpec-box">
+                <div id="pravy-stlpec">
+                    <div id="find_property">
+                        <form id="form_163050" class="appnitro"  method="post" action="#">
+                            <h2>Buscar por...</h2>
+                            <div>
+                                    <label class="description" for="element_1">Country </label>
+                            </div>
+                            <div>
+                                    <select class="element select medium" id="element_1" name="element_1">
+                                            <option value="1" selected="selected">- Select -</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <label class="description" for="element_2">City </label>  
+                            </div>
+                            <div>
+                                    <select class="element select medium" id="element_2" name="element_2">
+                                            <option value="1" selected="selected">- Select -</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <label class="description" for="element_3">Zip code </label>
+                            </div>
+                            <div>
+                                    <select class="element select medium" id="element_3" name="element_3">
+                                            <option value="1" selected="selected">- Select -</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <label class="description" for="element_4">Price </label>
+                            </div>
+                            <div>
+                                    <select class="element select small" id="element_4" name="element_4">
+                                            <option value="1" selected="selected">- Min -</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <label class="description" for="element_5">Price </label>
+                            </div>
+                            <div>
+                                    <select class="element select small" id="element_5" name="element_5">
+                                            <option value="1" selected="selected">- Max -</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <label class="description" for="element_6">Bedrooms </label>
+                            </div>
+                            <div>
+                                    <select class="element select small" id="element_6" name="element_6">
+                                            <option value="1" selected="selected">2</option>
+                                            <option value="2">Second option</option>
+                                            <option value="3">Third option</option>
+                                    </select>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- footer -->
+        <div id="footer">
+                <p>M&aacute;s <a href="http://www.mejoresplantillasgratis.es" title="MPG - plantillas web y plantillas Flash" target="_blank">Plantillas Web Gratis</a> en MPG.</p>
+                <p><a href="http://www.x-reality.sk">xreality</a></p>
+        </div>
         
-        <h:outputLabel value="{loginBeanArkadio.nombre} "/>
-        <h:outputLabel value="{loginBeanArkadio.apellidos}"/>
-        <a href="/TecnoSalud_JSF-war/PersonalAdministrativoLogout" >Salida</a>
-        
-        <h:form>
-            
-            Remitente:
-            <h:outputText id="remitente" value="#{crearMensajeArkadio.remitente}" /><br/><br/>
-            Estado:
-            <h:outputText id="estado" value="#{crearMensajeArkadio.estado}"/><br/><br/>
-            
-            Hora:
-            <h:outputText id="hora" value="#{crearMensajeArkadio.hora}"/><br/><br/>
-            Destinatario:
-            <h:outputText id="destinatario" value="#{crearMensajeArkadio.destinatario}"/><br/><br/>
-            wiadomosc
-            <h:outputText id="tipo_mensaje" value="#{crearMensajeArkadio.tipo_mensaje}"/><br/><br/>
-            Fecha
-            <h:outputText id="fecha" value="#{crearMensajeArkadio.fecha}">
-            
-            <f:convertDateTime pattern="yyyy-MM-dd" />
-            <h:message for="fecha" style="color:red" />
-            </h:outputText> <br/><br/>
-            
-            <h:selectOneMenu value="#{crearMensajeArkadio.ayuda_ajax}">
-                <f:selectItem itemValue="0" itemLabel="Elige" />
-                <f:selectItem itemValue="1" itemLabel="Administrador" />
-                <f:selectItem itemValue="2" itemLabel="Paciente" />	  
-                <f:ajax render="namelist"/>
-                <f:ajax render="messagetype"/>
-            </h:selectOneMenu>
-            
-            <h:selectOneMenu id="namelist" value="#{crearMensajeArkadio.destinatario}">
-                <f:selectItems value="#{crearMensajeArkadio.lista}" var ="persona" 
-                               itemLabel="#{persona.apellidos} #{persona.nombre}" itemValue="#{persona.dni}"  />
-            </h:selectOneMenu>
-            <h:selectOneRadio id="messagetype" 
-                             value="#{crearMensajeArkadio.tipo_mensaje}">
-                <f:selectItem itemDisabled="#{crearMensajeArkadio.disabled}" itemLabel="Mensaje privada" itemValue="WP"/>
-                <f:selectItem itemLabel="Contestar a peticion de modificar datos" itemValue="PM"/>
-                
-            </h:selectOneRadio>
-            <h:inputTextarea value="#{crearMensajeArkadio.contenido}">
-            </h:inputTextarea>
-            
-            <h:commandButton value="Enviar" 
-                             action="#{crearMensajeArkadio.doMensaje()}" >
-            </h:commandButton>
-            
-        </h:form>
         
     </h:body>
 </html>

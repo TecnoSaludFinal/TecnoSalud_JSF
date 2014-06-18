@@ -13,7 +13,9 @@ import app.entity.Administrador;
 import app.entity.Mensajes;
 import app.entity.Pacientes;
 import app.entity.PersonalAdministrativo;
+import java.io.IOException;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,6 +27,8 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.model.SelectItem;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -107,12 +111,20 @@ public class CrearMensajeBean implements Serializable{
     public void setAyuda_ajax(String ayuda_ajax) {
         this.ayuda_ajax = ayuda_ajax;
     }
+    
+    public String getDate()
+    {
+      SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+      String fecha2 = sdf.format(fecha);
+      return fecha2;
+    }
 
     public Date getFecha() {
         return fecha;
     }
 
     public void setFecha(Date fecha) {
+              
         this.fecha = fecha;
     }    
     
@@ -129,6 +141,10 @@ public class CrearMensajeBean implements Serializable{
     
     public void setContenido(String contenido)
     {
+        FacesContext context = javax.faces.context.FacesContext.getCurrentInstance();
+        HttpSession sesion = (HttpSession) context.getExternalContext().getSession(true);
+        PersonalAdministrativo personal = (PersonalAdministrativo) sesion.getAttribute("entidad");
+        remitente = personal.getDni();
         this.contenido = contenido;
     }
     
@@ -203,7 +219,7 @@ public class CrearMensajeBean implements Serializable{
         this.estado = estado;
     }
     
-    public void doMensaje()
+    public void doMensaje() throws IOException
     {
         if(ayuda_ajax == "2")
         {
@@ -241,7 +257,8 @@ public class CrearMensajeBean implements Serializable{
         message.setHora(h);
         
         mfl.create(message);
-    
+        FacesContext.getCurrentInstance().getExternalContext().redirect("/TecnoSalud_JSF-war/faces/arkadiusz_jsf/ListarMensajesArkadioLeidos.xhtml");
+        
     }
     
     
