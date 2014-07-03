@@ -87,7 +87,7 @@
                         
                         <div id="estate1-box">
                           <h3> Datos Personales </h3>
-                         <a href=faces/deiver_jsf/pacientePersonal.xhtml"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
+                         <a href="faces/deiver_jsf/pacientePersonal.xhtml"><img src="estilo/images/consultar.jpg" alt="Commercial Properties" /></a>
                          <p> Pinchando en este enlace podrás consultar sus datos personales.<br/><br/>
                         </div>
                         
