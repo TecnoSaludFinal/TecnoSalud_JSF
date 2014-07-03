@@ -17,7 +17,43 @@
         <meta http-equiv="Content-Type"	content="text/html;	charset=windows-1250" />
 	<meta http-equiv="Content-Language" content="sk" />
         <title>Listado citas</title>
-        <script	type="text/javascript"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script>
+            
+            $(document).ready(function()
+            {
+                $("#ocultar1").click(function(event)
+                {
+                    event.preventDefault();
+                    $("#capaefectos1").hide("slow");
+                });
+
+                $("#mostrar1").click(function(event)
+                {
+                    event.preventDefault();
+                    $("#capaefectos1").show(3000);
+                });
+            });
+        </script>
+        
+        <script>
+            
+            $(document).ready(function()
+            {
+                $("#ocultar2").click(function(event)
+                {
+                    event.preventDefault();
+                    $("#capaefectos2").hide("slow");
+                });
+
+                $("#mostrar2").click(function(event)
+                {
+                    event.preventDefault();
+                    $("#capaefectos2").show(3000);
+                });
+            });
+        </script>
         <link rel="stylesheet" href="estilo/style.css">
     </head>
     <body>
@@ -110,7 +146,7 @@
                 <div id="lavy-stlpec">
                     <div id="latest_properties">
                         <h2>Listado de citas</h2>
-                        
+                        <div id="capaefectos1">
                             <table border="1">
                                 <tr>
                                     <td><b>Médico</b></td>
@@ -152,9 +188,18 @@
                                     }
                                 %>
                             </table>
+                            </div>
+                            
                             <br/><br/>
+                            
+                            <p>
+                                <a href="#" id="ocultar1">Ocultar citas</a> | 
+                                <a href="#" id="mostrar1">Mostrar citas</a>  
+                            </p>
+                         <br/>   
+                            
                         <h2>Listado de peticiones</h2>
-                        
+                        <div id="capaefectos2">
                         <%
                             if(!pc.isEmpty())
                             {
@@ -214,87 +259,18 @@
                         <%
                             }
                         %>
+                        </div>
+                        
+                        <br/><br/>
+                            
+                            <p>
+                                <a href="#" id="ocultar2">Ocultar peticiones</a> | 
+                                <a href="#" id="mostrar2">Mostrar peticiones</a>  
+                            </p>
                     </div>
                 </div>
             </div>
-            <div id="pravy-stlpec-box">
-                <div id="pravy-stlpec">
-                    <div id="find_property">
-                        <form id="form_163050" class="appnitro"  method="post" action="#">
-                            <h2>Buscar por...</h2>
-                            <div>
-                                    <label class="description" for="element_1">Country </label>
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_1" name="element_1">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_2">City </label>  
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_2" name="element_2">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_3">Zip code </label>
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_3" name="element_3">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_4">Price </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_4" name="element_4">
-                                            <option value="1" selected="selected">- Min -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_5">Price </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_5" name="element_5">
-                                            <option value="1" selected="selected">- Max -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_6">Bedrooms </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_6" name="element_6">
-                                            <option value="1" selected="selected">2</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <div class="clear"></div>
         <!-- footer -->
