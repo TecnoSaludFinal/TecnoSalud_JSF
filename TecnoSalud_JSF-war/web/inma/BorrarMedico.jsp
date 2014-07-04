@@ -51,7 +51,7 @@
                         
                             </ul>
                      </li>
-                     <li><a href="/faces/inma/ListadoMensajes.xhtml">Mensajes</a>
+                     <li><a href="/faces/inma/ListadoMensajes.xhtml">Mensajes</a></li>
                             
                             <li>
                         <a href="#"> Formularios </a>
@@ -149,84 +149,7 @@
             </div>
 
         <br><br> 
-         <div id="pravy-stlpec-box">
-                <div id="pravy-stlpec">
-                    <div id="find_property">
-                        <form id="form_163050" class="appnitro"  method="post" action="#">
-                            <h2>Buscar citas por...</h2>
-                            <div>
-                                    <label class="description" for="element_1">Día </label>
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_1" name="element_1">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_2">City </label>  
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_2" name="element_2">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_3">Zip code </label>
-                            </div>
-                            <div>
-                                    <select class="element select medium" id="element_3" name="element_3">
-                                            <option value="1" selected="selected">- Select -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_4">Price </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_4" name="element_4">
-                                            <option value="1" selected="selected">- Min -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_5">Price </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_5" name="element_5">
-                                            <option value="1" selected="selected">- Max -</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <label class="description" for="element_6">Bedrooms </label>
-                            </div>
-                            <div>
-                                    <select class="element select small" id="element_6" name="element_6">
-                                            <option value="1" selected="selected">2</option>
-                                            <option value="2">Second option</option>
-                                            <option value="3">Third option</option>
-                                    </select>
-                            </div>
-                            <div class="clear"></div>
-                            <div>
-                                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        
 	</div>
         <div class="clear"></div>
         <!-- footer -->

@@ -64,8 +64,7 @@
         <div class="clear"></div>
         <!-- footer -->
         <div id="footer">
-                <p>M&aacute;s <a href="http://www.mejoresplantillasgratis.es" title="MPG - plantillas web y plantillas Flash" target="_blank">Plantillas Web Gratis</a> en MPG.</p>
-                <p><a href="http://www.x-reality.sk">xreality</a></p>
+                
         </div>
     </body>
 </html>
