@@ -40,7 +40,9 @@
                         
                             </ul>
                      </li>
-                     <li><a href="faces/inma/ListadoMensajes.xhtml">Mensajes</a>
+                        <li>
+                            <a href="faces/inma/ListadoMensajes.xhtml">Mensajes</a>
+                        </li>
                             
                             <li>
                         <a href="#"> Formularios </a>
@@ -64,9 +66,9 @@
             </div>
             <div class="search">
                 <div id="searchwrapper">
-                    <output type="text" class="searchbox" name="s">
-                        <%= a.getNombre() +" "+ a.getApellidos() +" -- "+ a.getIdRol().getTipoRol() %>
-                    </output>
+                    <h:outputText class="searchbox" value="#{sessionScope['entidad'].getNombre()} #{sessionScope['entidad'].getApellidos()} -- #{sessionScope['entidad'].getIdRol().getTipoRol()}">
+                        <a href="/TecnoSalud_JSF-war/logoutServlet" id="logout"> Salir </a>
+                    </h:outputText>
                 </div>
             </div>
             <div class="clear"></div>
